@@ -1,0 +1,41 @@
+li {
+    font-family: $main-font;
+    margin: 1rem 0;
+    position: relative;
+}
+
+ul {
+    position: relative;
+    padding-left: 0.5rem;
+
+    li::before {
+        content: '';
+        width: 10px;
+        min-width: 10px;
+        height: 10px;
+        min-height: 10px;
+        border-radius: 50%;
+        position: absolute;
+        top: 6px;
+        left: -20px;
+        display: inline-block;
+        background-color: $brand-color;
+    }
+
+    ul {
+        padding-left: 2rem;
+            li::before {
+                content: '';
+                width: 8px;
+                min-width: 8px;
+                height: 8px;
+                min-height: 8px;
+                border-radius: 50%;
+                position: absolute;
+                top: 8px;
+                left: -15px;
+                display: inline-block;
+                background-color: gray;
+        }
+    }
+}

@@ -1,0 +1,129 @@
+<div id="slide" class="body-box beige fade-in trama up">
+    <div class="flex slide-in-left p-2" style="box-shadow: 0 1px 3px rgba(0,0,0, 0.12), 1px 0 3px rgba(0,0,0, 0.12);">
+        <p>La <b class="brand">Ley Orgánica de Protección de Datos y garantía de derechos digitales</b> tiene como finalidad garantizar la seguridad jurídica tanto a las personas como a las empresas, asentando los principios dispuestos en el RGPD y estableciendo aspectos específicos como los siguientes:</p>
+    </div>
+    <div class="flex m-t-2 slide-in-left" style="box-shadow: 0 1px 3px rgba(0,0,0, 0.12), 1px 0 3px rgba(0,0,0, 0.12); background-color: #005F61">
+        <div class="col-100 p flex j-start a-center" style="flex-wrap: nowrap">
+            <img height="40px" src="img/icons/circle-info-solid.svg" alt="">
+            <p style="color: white; margin: 0 0 0 10px">
+                Haz clic en las pestañas para ver el contenido.
+            </p>
+        </div>
+    </div>
+    <div class="tab-component">
+        <div class="tabs">
+            <div class="tab active">DPO</div>
+            <div class="tab post-active">Sanciones</div>
+            <div class="tab post-active">Derechos digitales</div>
+        </div>
+        <div class="contents">
+            <div class="content active">
+                <div class="flex">
+                    <div class="col-50 p-r">
+                        <p><b>Se definen sectores de actividad en los que obligatoriamente las entidades que formen parte de estos deben nombrar un DPO (Data Protection Officer), por ejemplo:</b></p>
+                        <ul>
+                            <li>Entidades aseguradoras.</li>
+                            <li>Entidades financieras de crédito.</li>
+                            <li>Distribuidores y comercializadores de energía eléctrica y gas natural.</li>
+                            <li>Empresas de seguridad privada.</li>
+                            <li>Centros sanitarios.</li>
+                            <li>Operadores de juego a través de canales electrónicos.</li>
+                            <li>Federaciones deportivas cuando traten datos de menores de edad.</li>
+                        </ul>
+                    </div>
+                    <div class="col-50 p-l flex j-center a-center">
+                        <p style="text-align: center;"><b class="brand">En los supuestos no contemplados, se establece expresamente la posibilidad de llevar a cabo el nombramiento voluntario de un DPO.</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="flex">
+                    <!-- <div class="col-100">
+                        <p><b>En los supuestos no contemplados, se establece expresamente la posibilidad de llevar a cabo el nombramiento voluntario de un DPO.</b></p>
+                    </div> -->
+                    <div class="col-33 p-r">
+                        <p><b class="brand">Infracciones muy graves (con prescripción a los 3 años): Por ejemplo:</b></p>
+                        <ul>
+                            <li>El tratamiento de los datos personales sin justificación que legitime a la organización (visto en bases legitimadoras).</li>
+                            <li>El incumplimiento de los requisitos para la validez del consentimiento.</li>
+                        </ul>
+                    </div>
+                    <div class="col-33 p-r p-l">
+                        <p><b class="brand">Infracciones graves (con prescripción a los 2 años). Por ejemplo:</b></p>
+                        <ul>
+                            <li>El tratamiento de los datos personales de un menor de edad sin recabar su consentimiento cuando tenga capacidad para ello.</li>
+                            <li>La falta de adopción de medidas técnicas y organizativas que garanticen el principio rector de Privacy by Design.</li>
+                        </ul>
+                    </div>
+                    <div class="col-33 p-l">
+                        <p><b class="brand">Infracciones leves (con prescripción de 1 año). Por ejemplo:</b></p>
+                        <ul>
+                            <li>Incumplir el principio de transparencia de la información o no facilitar toda la información exigida por la norma al interesado.</li>
+                            <li>No atender las solicitudes de derechos realizadas por los interesados.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content" style="width: 100%">
+                <div class="flex">
+                    <div class="col-33">
+                        <img style="width: 100%" src="img/digital.jpg" alt="">
+                    </div>
+                    <div class="col-33 flex-column j-start a.center">
+                        <p style="text-align: center">Los derechos en la era Digital</p>
+                        <a data-fancybox data-type="iframe" data-src="docs/infografia_derechos_digitales.pdf" href="javascript:;">
+                            <img class="m-b" style="display: block; margin: 0 auto; height: 70px" src="img/icons/file-arrow-down-solid.svg" alt="">                 
+                        </a>
+                    </div>
+                    <div class="col-33 flex-column j-start a.center">
+                        <p style="text-align: center">Regulación en el Ámbito Laboral</p>
+                        <a data-fancybox data-type="iframe" data-src="docs/infografia_derechos_digitales_laboral.pdf" href="javascript:;">
+                            <img class="m-b" style="display: block; margin: 0 auto; height: 70px" src="img/icons/file-arrow-down-solid.svg" alt="">                 
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.fancybox.min.js"></script>
+<script>
+    var checkEvents = [true, false, false];
+    var contentHeight = 0;
+
+    for (i = 0; i < $('.content').length; i++) {
+        if($('.content').eq(i).outerHeight() > contentHeight) {
+            contentHeight = $('.content').eq(i).outerHeight();
+        }
+    }
+    $('.contents').height(contentHeight);
+    var count = 0;
+    $('.tab').click(function() {
+        count++;
+        let index = $(this).index();
+        checkEvents[index] = true;
+        if(!checkEvents.includes(false)) {
+            passPage();
+        }
+        for (i = 0; i < $('.tab').length; i++) {
+            if(i === index) {
+                $('.tab').eq(i).removeClass('prev-active');
+                $('.tab').eq(i).removeClass('post-active');
+                $('.tab').eq(i).addClass('active');
+                $('.content').eq(i).addClass('active');
+            } else if (i < index) {
+                $('.tab').eq(i).removeClass('active');
+                $('.tab').eq(i).removeClass('post-active');
+                $('.tab').eq(i).addClass('prev-active');
+                $('.content').eq(i).removeClass('active');
+            } else {
+                $('.tab').eq(i).removeClass('active');
+                $('.tab').eq(i).removeClass('prev-active');
+                $('.tab').eq(i).addClass('post-active');
+                $('.content').eq(i).removeClass('active');
+            }
+        }
+    });
+</script>
+
+

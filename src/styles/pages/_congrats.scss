@@ -1,0 +1,84 @@
+#fail, #pre-congrats {
+    display: none;
+    text-align: center;
+    h2 {
+        font-size: 24px;
+        font-family: $main-font;
+        font-weight: 400;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .circle {
+        background-color: $brand-color;
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        margin: 2rem auto;
+        @include flex(center, center);
+        position: relative;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+
+        &::before {
+            content: '';
+            // background-image: url('../img/logo-redsys.svg');
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            top: -30px;
+            left: -30px;
+        }
+
+        p {
+            font-size: 60px;
+            font-family: $bold-main-font;
+            color: white;
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+            margin: 0;
+        }
+    }
+}
+
+#answers {
+    display: none;
+
+    h2 {
+        margin: 2rem 0;
+        font-family: $main-font;
+        font-weight: 400;
+    }
+}
+
+#congrats {
+    display: none;
+    text-align: center;
+    h1 {
+        font-size: 7vw;
+        color: $brand-color
+    }
+
+    h2 {
+        color: #555;
+        font-size: 2.1rem;
+        font-weight: 700;
+    }
+
+    p {
+        color: #888;
+        font-size: 1.5rem;
+    }
+
+    input {
+        display: block;
+        border: 2px solid $brand-color;
+        margin: 1rem auto;
+        width: 60%;
+        max-width: 90%;
+        font-size: 1.2rem;
+        font-family: $main-font;
+        padding: 1rem 2rem;
+        border-radius: .5rem;
+    }
+}

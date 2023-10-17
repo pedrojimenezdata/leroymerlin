@@ -1,0 +1,19 @@
+<div id="slide" class="body-box fade-in up">
+    <div class="col-100 instructions">
+        <p>Haz clic en <span style="font-size: 1.2rem; margin-bottom: 0.3rem">&#9658;</span> para ver el vídeo HASTA EL FINAL.</p>
+    </div>
+    <!-- video2 -->
+    <!-- <video width="100%" controls src="https://s3-eu-west-1.amazonaws.com/cdn2.culturacompliance.com/elearning/cultura/privacy/video/e0d0e5a3015b134f84397b4e19e357c9b715b6af_es.mp4"></video> -->
+    <video width="100%" controls src="video/02_RGPD_Leroy.mp4"></video>
+</div>
+<script>
+    var checkEvents = [false];
+    $(document).ready(function(){
+        $('video').on('ended', function(){
+            checkEvents[0] = true;
+            if(!checkEvents.includes(false)) {
+                passPage();
+            }
+        });
+    });
+</script>

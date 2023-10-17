@@ -1,0 +1,60 @@
+// h1 {
+//     font-family: $extra-bold-main-font;
+// }
+
+// h2 {
+//     font-family: $extra-bold-main-font;
+// }
+
+// h3 {
+//     font-family: $extra-bold-main-font;
+//     font-size: 1.1rem;
+// }
+
+p {
+    font-family: $main-font;
+    font-size: 1rem;
+    line-height: 1.44;
+    margin-bottom: 1rem;
+
+    img {
+        height: 1.1rem;
+        margin-right: 5px;
+    }
+}
+
+p:nth-last-child {
+    margin-bottom: 1rem;
+}
+
+b {
+    font-family: $bold-main-font;    
+}
+
+b.brand {
+    color: $brand-color;
+}
+
+a {
+    color: #337ab7;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.center {
+    text-align: center;
+}
+
+.super-text {
+    background: linear-gradient(135deg, #888 0%, #dc7c26 100%);
+    box-shadow: $shadow;
+
+    p {
+        color: white;
+    }
+}
+
+.super-text.transparent {
+    background: rgba(0, 0, 0, 0.5);
+}
+

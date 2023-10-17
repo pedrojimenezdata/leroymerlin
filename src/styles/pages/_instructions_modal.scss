@@ -1,0 +1,100 @@
+.instructions_modal,
+.download_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 300;
+    display: none;
+
+    .close {
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        top: 2rem;
+        right: 40px;
+        text-shadow: 0 1px 0 #fff;
+        font-family: $extra-bold-main-font;
+        font-size: 30px;
+    }
+    .modal {
+        background-color: white;
+        padding: 1.5rem 1rem;
+        max-width: 640px;
+        margin: 2rem auto;
+        border-radius: .5rem;
+    }
+}
+
+.instructions_modal  p {
+    @include flex(flex-start, center);
+    margin: 20px 0;
+
+    span {
+        min-width: 60px;
+        img {
+            height: 40px;
+        }
+    }
+
+    &:first-child {
+        display: block;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+} 
+
+.download_modal  p {
+    @include flex(space-between, center);
+    margin: 20px 0;
+
+    span {
+        @include flex(flex-start, center);
+        span {
+            color: #585799;
+            font-size: 30px;
+            margin-right: 10px;
+        }
+    }
+
+    // button {
+    //     background-color: #585799;
+    // }
+
+    &:first-child {
+        display: block;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    &:nth-child(2) {
+        display: block;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+} 
+
+.instructions_modal.open,
+.download_modal.open {
+    display: block;
+}
+
+@media (max-width: 760px) {
+    .instructions_modal,
+    .download_modal {
+
+        .close {
+            color: grey;
+            top: 1rem;
+            right: 20px;
+            z-index: 400;
+        }
+        .modal {
+            padding: 1rem 0.5rem;
+            max-width: calc(100% - 1rem);
+            margin: 0.5rem auto;
+        }
+    }
+}

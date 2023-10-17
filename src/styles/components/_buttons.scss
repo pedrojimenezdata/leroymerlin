@@ -1,0 +1,187 @@
+button {
+    background-color: $brand-color;
+    color: white;
+    font-family: $main-font;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: all 400ms ease-in-out;
+
+    &:hover {
+        background-color: $brand-color-on-hover;
+        color: white;
+    }
+}
+
+button.outline {
+    min-width: 130px;
+    background-color:  white;
+    color:  $brand-color;
+    border: 1px solid $brand-color;
+    font-size: 1rem;
+    transition: all 400ms ease-in-out;
+
+    &:hover {
+        background-color: white;
+        color: $secondary-color;
+        border: 1px solid $secondary-color;
+    }
+
+    &.checked {
+        background-color:  $secondary-color;
+        color: white;
+    }
+
+    &.failed {
+        background-color: $danger-color;
+        border: 1px solid $danger-color;
+        color: white;
+    }
+
+    &.success {
+        background-color: $success-color;
+        border: 1px solid $success-color;
+        color: white;
+    }
+}
+
+button.white {
+    background-color:  #888888;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    transition: all 400ms ease-in-out;
+
+    &:hover {
+        background-color: white;
+        color: $secondary-color;
+    }
+}
+
+button.reset {
+    background-color: $brand-color;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: $main-font;
+    border-radius: 4px;
+}
+
+
+#prev-btn,
+#next-btn {
+    border: 1.5px solid $secondary-color;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    min-height: 40px;
+    border-radius: 50px;
+    padding: 0;
+    background-color: white;
+
+    &:hover {
+        // background-color: white;
+        border: 1.5px solid $brand-color;
+
+        svg {
+            stroke: $brand-color;
+        }
+    }
+}
+
+#prev-btn:hover::after {
+    content: 'Retroceder';
+    background-color: white;
+    padding: 8px;
+    font-family: $main-font;
+    color: $brand-color;
+    font-size: 14px;
+    display: inline-block;
+    transform: translate(-18px, -2px);
+    transition: 400ms all ease-in-out;
+}
+
+#next-btn:hover::after {
+    content: 'Avanzar';
+    background-color: white;
+    padding: 8px;
+    font-family: $main-font;
+    color: $brand-color;
+    font-size: 14px;
+    display: inline-block;
+    transform: translate(-15px, -2px);
+    transition: 400ms all ease-in-out;
+}
+
+#next-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.2;
+}
+
+#next-btn:disabled:hover {
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+#next-btn:disabled:hover::after {
+    content: 'Completa la pantalla antes';
+    font-family: $main-font;
+    color: $brand-color;
+    font-size: 14px;
+    display: inline-block;
+    transform: translate(-14px, -2px);
+    transition: 400ms all ease-in-out;
+}
+
+#test-btn:disabled,
+#check-btn:disabled {
+    cursor: not-allowed;
+    background-color: lightgrey;
+}
+
+@media (max-width: $mobile-width) {
+    #prev-btn,
+    #next-btn {
+        border: 2px solid $brand-color;
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        min-height: 40px;
+        border-radius: 30px;
+        img {
+            margin-top: 2px;
+            height: 20px;
+        }
+        &:hover {
+            background-color: white;
+        }
+    }
+
+    #prev-btn {
+        svg {
+            margin-top: 0;
+            margin-right: 5px;
+        }
+
+    }
+
+    #next-btn {
+        svg {
+            margin-top: 0;
+            margin-left: 2px;
+        }
+
+    }
+
+    #prev-btn:hover::after {
+        content: none;
+    }
+
+    #next-btn:hover::after {
+        content: none;
+    }
+
+    #next-btn:disabled:hover::after {
+        content: none;
+    }
+
+}

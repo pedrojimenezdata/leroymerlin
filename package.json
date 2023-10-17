@@ -1,0 +1,5 @@
+{
+    "scripts": {
+        "zip": "zip -r -X /Users/pedro/Desktop/\"$npm_config_scorm\".zip ./"
+    }
+}

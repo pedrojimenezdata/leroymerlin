@@ -1,0 +1,124 @@
+
+.tab-component {
+    margin: 2rem auto 0;
+    box-shadow: $shadow;
+}
+
+.tabs {
+    display: flex;
+    font-family: $main-font;
+}
+
+.tab {
+    width: 33.33333%;
+    background-color: $brand-color;
+    color: white;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 300ms ease-in-out;
+}
+
+.tab.active {
+    border-bottom: none;
+    background-color: white;
+    color: $brand-color;
+    font-weight: 900;
+}
+
+.tab:nth-of-type(2).prev-active {
+    border-left: 1px solid white;
+}
+
+.tab:nth-of-type(2).post-active {
+    border-right: 1px solid white;
+}
+
+.tab:nth-of-type(3).prev-active {
+    border-left: 1px solid white;
+}
+
+.tab:nth-of-type(3).post-active {
+    border-right: 1px solid white;
+}
+
+.tab:nth-of-type(4).prev-active {
+    border-left: 1px solid white;
+}
+
+.tab:nth-of-type(4).post-active {
+    border-right: 1px solid white;
+}
+
+.tab:nth-of-type(5).prev-active {
+    border-left: 1px solid white;
+}
+
+.tab:nth-of-type(5).post-active {
+    border-right: 1px solid white;
+}
+
+.contents {
+    display: flex;
+    background-color: white;
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem 2rem;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+}
+
+.content.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+@media (max-width: 1020px) {
+    .col-20, .col-30, .col-40, .col-60 {
+        width: 100% !important;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: $mobile-width) {
+    .tabs {
+        flex-direction: column;
+        .tab {
+            width: 100%;
+        }
+    }
+
+    .tab:nth-of-type(2).prev-active {
+        border-left: none;
+    }
+
+    .tab:nth-of-type(2).post-active {
+        border-right: none;
+    }
+    .tab:nth-of-type(3).prev-active {
+        border-left: none;
+    }
+
+    .tab:nth-of-type(3).post-active {
+        border-right: none;
+    }
+    .tab:nth-of-type(4).prev-active {
+        border-left: none;
+    }
+
+    .tab:nth-of-type(4).post-active {
+        border-right: none;
+    }
+    .tab:nth-of-type(5).prev-active {
+        border-left: none;
+    }
+
+    .tab:nth-of-type(5).post-active {
+        border-right: none;
+    }
+}

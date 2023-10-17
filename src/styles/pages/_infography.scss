@@ -1,0 +1,165 @@
+.info-pics {
+    position: relative;
+    margin: 3rem auto;
+    max-width: 100%;
+    min-height: 800px;
+}
+
+.info-pics #pic-1,
+.info-pics #pic-2,
+.info-pics #pic-3,
+.info-pics #pic-4,
+.info-pics #pic-5,
+.info-pics #pic-6,
+.info-pics #pic-7,
+.info-pics #pic-8 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+
+    img {
+        width: 100%;
+        max-width: 100%;
+        transition: all 400ms ease-in-out;
+    }
+}
+.info-pics #pic-3 {
+    z-index: 2;
+}
+
+#pic-uno.open {
+    transform: translateY(-65%) scale(1.4);
+}
+
+#pic-dos.open {
+    transform: translate(20%, -40%) scale(1.4);
+}
+
+#pic-tres.open {
+    transform: translate(-50%, -65%) scale(1.4);
+}
+
+#pic-cuatro.open {
+    transform: translate(-70%, -30%) scale(1.4);
+}
+
+#pic-cinco.open {
+    transform: translate(-22%, 25%) scale(1.4);
+}
+
+#pic-seis.open {
+    transform: translate(5%, 5%) scale(1.4);
+}
+
+#pic-siete.open {
+    transform: translate(-42%,-5%) scale(1.4);
+}
+
+#pic-ocho.open {
+    transform: translate(-20%, -30%) scale(1.4);
+}
+
+#number-uno,
+#number-dos,
+#number-tres,
+#number-cuatro,
+#number-cinco,
+#number-seis,
+#number-siete,
+#number-ocho {
+    position: absolute;
+    @include flex(center, center);
+    font-family: $bold-main-font;
+    font-size: 20px;
+    font-weight: 900;
+    color: #999;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    border: 3px solid #999;
+    cursor: pointer;
+    z-index: 10;
+
+    &.checked::after {
+        content: '';
+        position: absolute;
+        background: url('../img/check-border.svg') no-repeat;
+        background-size: 20px;
+        width: 25px;
+        height: 25px;
+        top: -14px;
+        right: -17px;
+    }
+}
+
+#number-tres {
+    top: 83%;
+    left: 13%;
+}
+
+#number-uno {
+    top: 59%;
+    left: 0%;
+}
+
+#number-dos {
+    top: 77%;
+    left: 48%;
+}
+
+#number-cuatro {
+    top: 48%;
+    left: 96%;
+}
+
+#number-cinco {
+    top: 6%;
+    left: 36%;
+}
+
+#number-seis {
+    top: 27%;
+    left: 8%;
+}
+
+#number-siete {
+    top: 29%;
+    left: 78%;
+}
+
+#number-ocho {
+    top: 55%;
+    left: 30%;
+}
+
+.modal-info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    background-color: white;
+    padding: 2rem;
+    max-width: 540px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+    display: none;
+
+    .header {
+        @include flex(space-between, center);
+        margin-bottom: 1rem;
+        h1 {
+            color: $brand-color;
+            font-family: $bold-main-font;
+        }
+
+        img {
+            height: 40px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+

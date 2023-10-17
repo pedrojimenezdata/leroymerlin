@@ -1,0 +1,199 @@
+<div id="slide" class="body-box fade-in trama up">
+    <div class="flex m-t" style="box-shadow: 0 1px 3px rgba(0,0,0, 0.12), 1px 0 3px rgba(0,0,0, 0.12); background-color: #005F61">
+        <div class="col-100 p">
+            <p style="color: white" class="flex j-start a-center">
+                <svg height="30" width="30" version="1.1" id="Capa_1" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:#FFFFFF;}
+                    .st1{opacity:0.46;fill:#555c61;}
+                </style>
+                <circle class="st0" cx="256" cy="256" r="248"/>
+                <path class="st1" d="M256,8C119,8,8,119.1,8,256c0,137,111,248,248,248s248-111,248-248C504,119.1,393,8,256,8z M256,118
+                    c23.2,0,42,18.8,42,42s-18.8,42-42,42s-42-18.8-42-42S232.8,118,256,118z M312,372c0,6.6-5.4,12-12,12h-88c-6.6,0-12-5.4-12-12v-24
+                    c0-6.6,5.4-12,12-12h12v-64h-12c-6.6,0-12-5.4-12-12v-24c0-6.6,5.4-12,12-12h64c6.6,0,12,5.4,12,12v100h12c6.6,0,12,5.4,12,12V372z"
+                    />
+                </svg>
+                &nbsp;&nbsp;Ejercicio
+            </p>
+            <p style="color: white">Responde "sí" o "no" en las siguientes preguntas:</p>
+        </div>
+    </div>
+    <div class="p m-t-2" style="box-shadow: 0 1px 3px rgba(0,0,0, 0.12), 1px 0 3px rgba(0,0,0, 0.12); background-color: #ffffff">
+        <div id="q1" class="col-100 p flex j-space-between a-center">
+            <span style="max-width: 640px">¿Resulta de aplicación el RGPD en Rusia en el tratamiento de datos personales de sus ciudadanos?</span>
+            <span>
+                <button onclick="checkQuestion1(0)" class="outline">sí</button>
+                <button onclick="checkQuestion1(1)"class="outline">no</button>
+            </span>
+        </div>
+        <div id="q2" class="col-100 p flex j-space-between a-center">
+            <span style="max-width: 640px">¿Resulta de aplicación el RGPD en Suiza en el tratamiento de datos personales de sus ciudadanos?</span>
+            <span>
+                <button onclick="checkQuestion2(0)" class="outline">sí</button>
+                <button onclick="checkQuestion2(1)"class="outline">no</button>
+            </span>
+        </div>
+        <div id="q3" class="col-100 p flex j-space-between a-center">
+            <span style="max-width: 640px">¿Resulta de aplicación el RGPD en Bulgaria en el tratamiento de datos personales de ciudadanos europeos?</span>
+            <span>
+                <button onclick="checkQuestion3(0)" class="outline">sí</button>
+                <button onclick="checkQuestion3(1)"class="outline">no</button>
+            </span>
+        </div>
+        <div id="q4" class="col-100 p flex j-space-between a-center">
+            <span style="max-width: 640px">¿Resulta de aplicación el RGPD en Italia en el tratamiento de datos personales de ciudadanos europeos?</span>
+            <span>
+                <button onclick="checkQuestion4(0)" class="outline">sí</button>
+                <button onclick="checkQuestion4(1)"class="outline">no</button>
+            </span>
+        </div>
+        <div id="q5" class="col-100 p flex j-space-between a-center">
+            <span style="max-width: 640px">¿El RGPD es de aplicación para una empresa española que opera en Australia prestando servicios de gestión de nóminas?</span>
+            <span>
+                <button onclick="checkQuestion5(0)" class="outline">sí</button>
+                <button onclick="checkQuestion5(1)"class="outline">no</button>
+            </span>
+        </div>
+        <div id="q6" class="col-100 p flex j-space-between a-center">
+            <span style="max-width: 640px">¿El RGPD es de aplicación para una filial independiente de una multinacional financiera española que opera únicamente en Brasil?</span>
+            <span>
+                <button onclick="checkQuestion6(0)" class="outline">sí</button>
+                <button onclick="checkQuestion6(1)"class="outline">no</button>
+            </span>
+        </div>
+        <div id="q7" class="col-100 p flex j-space-between a-center">
+            <span style="max-width: 640px">¿El RGPD es de aplicación para una empresa japonesa que opera en España vendiendo cámaras fotográficas a particulares?</span>
+            <span>
+                <button onclick="checkQuestion7(0)" class="outline">sí</button>
+                <button onclick="checkQuestion7(1)"class="outline">no</button>
+            </span>
+        </div>
+        <div class="flex j-end">
+            <button disabled id="check-btn" class="m-t-2" onclick="checkAnswer()">Validar</button>
+        </div>
+    </div>
+    
+</div>
+<script>
+    var questions1 = document.querySelectorAll("#q1 button");
+    var questions2 = document.querySelectorAll("#q2 button");
+    var questions3 = document.querySelectorAll("#q3 button");
+    var questions4 = document.querySelectorAll("#q4 button");
+    var questions5 = document.querySelectorAll("#q5 button");
+    var questions6 = document.querySelectorAll("#q6 button");
+    var questions7 = document.querySelectorAll("#q7 button");
+    var userAnswer = [null, null, null, null, null, null, null];
+
+    function checkQuestion1(index) {
+        questions1[0].classList.remove('checked');
+        questions1[1].classList.remove('checked');
+        questions1[index].classList.add('checked');
+        userAnswer[0] = index;
+        enabledButton()
+    }
+
+    function checkQuestion2(index) {
+        questions2[0].classList.remove('checked');
+        questions2[1].classList.remove('checked');
+        questions2[index].classList.add('checked');
+        userAnswer[1] = index;
+        enabledButton() 
+    }
+
+    function checkQuestion3(index) {
+        questions3[0].classList.remove('checked');
+        questions3[1].classList.remove('checked');
+        questions3[index].classList.add('checked');
+        userAnswer[2] = index;
+        enabledButton()
+
+    }
+
+    function checkQuestion4(index) {
+        questions4[0].classList.remove('checked');
+        questions4[1].classList.remove('checked');
+        questions4[index].classList.add('checked');
+        userAnswer[3] = index;
+        enabledButton()
+    }
+
+    function checkQuestion5(index) {
+        questions5[0].classList.remove('checked');
+        questions5[1].classList.remove('checked');
+        questions5[index].classList.add('checked');
+        userAnswer[4] = index;
+        enabledButton()
+    }
+
+    function checkQuestion6(index) {
+        questions6[0].classList.remove('checked');
+        questions6[1].classList.remove('checked');
+        questions6[index].classList.add('checked');
+        userAnswer[5] = index;
+        enabledButton()
+    }
+
+    function checkQuestion7(index) {
+        questions7[0].classList.remove('checked');
+        questions7[1].classList.remove('checked');
+        questions7[index].classList.add('checked');
+        userAnswer[6] = index;
+        enabledButton()
+    }
+
+    function enabledButton() {
+        if(!userAnswer.includes(null)) {
+            document.getElementById('check-btn').disabled = false;
+        }
+    }
+
+    function checkAnswer() {
+
+        questions1[0].classList.remove('checked');
+        questions1[1].classList.remove('checked');
+        questions2[0].classList.remove('checked');
+        questions2[1].classList.remove('checked');
+        questions3[0].classList.remove('checked');
+        questions3[1].classList.remove('checked');
+        questions4[0].classList.remove('checked');
+        questions4[1].classList.remove('checked');
+        questions5[0].classList.remove('checked');
+        questions5[1].classList.remove('checked');
+        questions6[0].classList.remove('checked');
+        questions6[1].classList.remove('checked');
+        questions7[0].classList.remove('checked');
+        questions7[1].classList.remove('checked');
+        if(userAnswer[0] == 0){
+            questions1[0].classList.add('failed');
+        }
+        questions1[1].classList.add('success');
+        if(userAnswer[1] == 0){
+            questions2[0].classList.add('failed');
+        }
+        questions2[1].classList.add('success');
+        if(userAnswer[2] == 1){
+            questions3[1].classList.add('failed');
+        }
+        questions3[0].classList.add('success');
+        if(userAnswer[3] == 1){
+            questions4[1].classList.add('failed');
+        }
+        questions4[0].classList.add('success');
+        if(userAnswer[4] == 1){
+            questions5[1].classList.add('failed');
+        }
+        questions5[0].classList.add('success');
+        if(userAnswer[5] == 0){
+            questions6[0].classList.add('failed');
+        }
+        questions6[1].classList.add('success');
+        if(userAnswer[6] == 1){
+            questions6[1].classList.add('failed');
+        }
+        questions7[0].classList.add('success');
+        passPage();
+    }
+
+</script>
+

@@ -1,0 +1,153 @@
+.question {
+    background-color: white;
+    padding: 1.5rem;
+    
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.options {
+    background-color: white;
+    @include flex(flex-start, strench);
+    box-shadow: $shadow;
+
+    .value {
+        background-color: $secondary-color;
+        width: 150px;
+        min-width: 150px;
+        border-right: 1.5px solid white;
+        border-bottom: 1.5px solid white;
+        @include flex(center, center);
+        p {
+            color: white;
+            font-family: $bold-main-font;
+            margin-bottom: 0;
+        }
+        &.correct {
+            background-color: #70D990;
+        }
+        &.incorrect {
+            background-color: rgb(221, 99, 99);
+        }
+        &.not-touched {
+            background-color: transparent;
+            p {
+                color: #555555;
+            }
+        }
+    }
+
+    .label {
+        width: calc(100% - 100px);
+        padding: 1.5rem;
+        cursor: pointer;
+        transition: all 400ms ease-in-out;
+        border-bottom: 1.5px solid white;
+
+        p {
+            margin-bottom: 0;
+        }
+        &:hover {
+            background-color:#eaeaea;
+        }
+        &.checked {
+            background-color: $secondary-color;
+
+            p {
+                color: white;
+            }
+        }
+        &.correct {
+            background-color: #70D990;
+        }
+        &.incorrect {
+            background-color: rgb(221, 99, 99);
+        }
+    }
+}
+
+.options.yes-no {
+    background-color: white;
+    @include flex(flex-start, strench);
+    box-shadow: $shadow;
+
+    .value {
+        background-color: #c8c8c8;
+        width: 100px;
+        min-width: 100px;
+        border-right: 1.5px solid white;
+        border-bottom: 1.5px solid white;
+        @include flex(center, center);
+        cursor: pointer;
+        p {
+            color: white;
+            font-family: $bold-main-font;
+            margin-bottom: 0;
+        }
+        &:hover {
+            background-color: #949494;
+        }
+        &.checked {
+            background-color: #505050;
+            p {
+                color: white;
+            }
+        }
+        &.correct {
+            background-color: #70D990;
+        }
+        &.incorrect {
+            background-color: #dd6363;
+        }
+    }
+
+    .label {
+        width: calc(100% - 100px);
+        padding: 1.5rem;
+        cursor: pointer;
+        transition: all 400ms ease-in-out;
+        border-bottom: 1.5px solid white;
+
+        p {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            background-color: white;
+        }
+    }
+}
+
+
+.success-answer {
+    display: none;
+    color: #70D990;
+}
+
+.fail-answer {
+    display: none;
+    color:rgb(221, 99, 99);
+}
+
+
+.feedback-yes-no {
+    display: none;
+    padding: 1.5rem;
+}
+
+#feedback {
+    display: none;
+    padding: 1.5rem 1.5rem 1.5rem 150px;
+}
+
+// @media (max-width: $mobile-width) {
+//     .options {
+
+//         .value {
+//             background-color: $brand-color;
+//             width: 100px;
+//             min-width: 100px;
+//         }
+//     }
+// }

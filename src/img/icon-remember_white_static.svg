@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 82.1" style="enable-background:new 0 0 60 82.1;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st1{opacity:0.25;fill:#FFFFFF;}
+
+
+  .st0{
+	stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: dash 0.01s linear;
+    stroke-width: 2;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 500;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  .st1{
+  opacity: 0;
+  animation: opa 0.01s linear;
+  animation-delay: 0s;
+    animation-fill-mode: forwards;
+  }
+
+    @keyframes opa {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.25;
+    }
+  }
+
+
+</style>
+<path  class="st0" d="M7.2,28.1c0-11.3,9.2-20.4,20.4-20.4"/>
+<path class="st1" d="M58.8,41.3L58.8,41.3c0.8-2.5,1.2-5.2,1.2-8C60,18.6,48,6.7,33.3,6.7S6.7,18.6,6.7,33.3c0,2.8,0.4,5.5,1.2,8h0
+	l0,0c0.3,1,0.7,2,1.1,3l10.4,27.2h27.8l10.4-27.2C58.1,43.3,58.4,42.3,58.8,41.3L58.8,41.3z"/>
+<path  class="st0" d="M53.1,35.6L53.1,35.6c0.8-2.5,1.2-5.2,1.2-8C54.3,12.9,42.4,1,27.7,1S1,12.9,1,27.7c0,2.8,0.4,5.5,1.2,8h0l0,0
+	c0.3,1,0.7,2,1.1,3l10.4,27.2h27.8l10.4-27.2C52.4,37.7,52.8,36.7,53.1,35.6L53.1,35.6z"/>
+<line  class="st0" x1="13.8" y1="70.8" x2="41.5" y2="70.8"/>
+<line  class="st0" x1="16.2" y1="76" x2="39.1" y2="76"/>
+<line  class="st0" x1="18.7" y1="81.1" x2="36.6" y2="81.1"/>
+<polyline  class="st0" points="23.6,65.9 18.7,47.3 36.6,47.3 31.7,65.9 "/>
+<line  class="st0" x1="21.1" y1="43.6" x2="34.2" y2="43.6"/>
+<line  class="st0" x1="23.6" y1="39.9" x2="31.7" y2="39.9"/>
+</svg>

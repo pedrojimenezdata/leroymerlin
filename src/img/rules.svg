@@ -1,0 +1,74 @@
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" width="83.4" height="73.7" viewBox="0 0 83.4 73.7">
+
+  <style>
+    
+    .st1{stroke-width: 1.5;}
+    .st2{stroke-width: 2;}
+
+  .st1, .st2{
+    fill: none;stroke: #000;stroke-linecap: round;stroke-linejoin: round;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: dash 3.5s linear;
+  
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+  }
+
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 500;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+    }
+
+    .bk{
+    fill: #81bcbf;
+    opacity: 0;
+    isolation: isolate;
+    animation: opa 0.5s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+    }
+
+      @keyframes opa {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.3;
+    }
+    }
+
+  </style>
+
+
+  <title>rules</title>
+
+  <path class="bk" d="M4,15.1V18c0,1.5.3,2.6,1.8,2.6h8.7V65.5c0,7,3.6,8,7.3,8.2H62c6.8-.2,11.1-.4,11.1-9.4,0-3.2-1.8-3.5-3.3-3.5H67.7l-.4-46.2A9.7,9.7,0,0,0,57.6,5H9.7C4.1,5,4,9.5,4,15.1Z" style="fill: #81bcbf;opacity: 0.20000000298023224;isolation: isolate"/>
+  <polygon class="bk" points="78.2 15.1 73.1 22.3 73.1 48.4 73.1 52.5 83.3 52.5 83.4 48.5 83.4 22.3 78.2 15.1" style=""/>
+
+  <line class="st1" x1="30.4" y1="17.3" x2="57.1" y2="17.3" style=""/>
+
+  <polygon class="st2" points="80.4 45.5 80.4 19.3 75.2 12.1 70.1 19.3 70.1 45.4 80.4 45.5" style=""/>
+
+  <line class="st2" x1="80.4" y1="19.3" x2="70.1" y2="19.3" style=""/>
+
+  <line class="st2" x1="75.3" y1="45.5" x2="75.3" y2="19.3" style=""/>
+
+  <polyline class="st2" points="80.4 45.5 80.3 49.5 70.1 49.5 70.1 45.4" style=""/>
+
+  <path class="st2" d="M1,11.2v2.9c0,1.5.3,2.6,1.8,2.6h8.7V61.6c0,7,3.6,8,7.3,8.2H59c6.8-.2,11.1-.4,11.1-9.4,0-3.2-1.8-3.5-3.3-3.5H64.7l-.4-46.2a9.7,9.7,0,0,0-9.7-9.6H6.7C1.1,1,1,5.6,1,11.2ZM64.7,56.9H28.1a2.6,2.6,0,0,0-2.6,2.6v3c0,4.1-2.5,7.3-6.6,7.3M6.7,1c2.7,0,4.8,2,4.8,5.7V25.5" style=""/>
+
+  <polyline class="st2" points="18.5 16.1 20.4 18.1 25.5 12.7" style=""/>
+
+  <line class="st1" x1="30.4" y1="29.9" x2="57.1" y2="29.9" style=""/>
+
+  <polyline class="st2" points="18.5 28.8 20.4 30.8 25.5 25.4" style=""/>
+
+  <line class="st1" x1="29.9" y1="42.7" x2="56.7" y2="42.7" style=""/>
+
+  <polyline class="st2" points="18.1 41.5 20 43.6 25.1 38.2" style=""/>
+</svg>

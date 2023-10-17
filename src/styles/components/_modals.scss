@@ -1,0 +1,108 @@
+
+#overlay,
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+
+#overlay.show {
+  display: block;
+}
+
+#overlay.visible {
+  opacity: 1;
+}
+
+.overlay.abierto {
+  display: block; 
+  opacity: 1;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dottedrgba(255,255,255,1);
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 440px;
+  background-color:rgba(255,255,255,1);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f9f9f9;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -220px;
+  padding: 1rem;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -20px;
+  border-width: 20px;
+  border-style: solid;
+  border-color: transparent transparent rgba(255,255,255,1) transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+.progress-modal {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 500;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+
+    .modal {
+        margin: 2rem auto;
+        border-radius: 0.5rem;
+        z-index: 100;
+        background-color: white;
+        max-width: 540px;
+        padding: 2rem;
+
+        p {
+            @include flex(flex-start, center);
+            font-size: 1.1rem;
+            font-family: $bold-main-font;
+
+            img {
+                height: 60px;
+            }
+        }
+
+        button {
+            border-radius: 0.5rem;
+        }
+    }
+
+}
+
+.progress-modal.open {
+    display: block;
+}

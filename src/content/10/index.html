@@ -1,0 +1,19 @@
+<div id="slide" class="body-box fade-in up">
+    <div class="col-100 instructions">
+        <p>Haz clic en <span style="font-size: 1.2rem; margin-bottom: 0.3rem">&#9658;</span> para ver el vídeo HASTA EL FINAL.</p>
+    </div>
+    <!-- video5 -->
+    <!-- <video width="100%" controls src="https://s3-eu-west-1.amazonaws.com/cdn2.culturacompliance.com/elearning/isms-forum/privacidad/video/51925e224bdd056bb249fba7ffe41b98799ce442_es.mp4"></video> -->
+    <video width="100%" controls src="video/05_BasesLegitimadoras_es_Leroy.mp4"></video>
+</div>
+<script>
+    var checkEvents = [false];
+    $(document).ready(function(){
+        $('video').on('ended', function(){
+            checkEvents[0] = true;
+            if(!checkEvents.includes(false)) {
+                passPage();
+            }
+        });
+    });
+</script>

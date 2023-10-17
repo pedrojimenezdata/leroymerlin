@@ -1,0 +1,73 @@
+/* CSS Scormy */
+/* By Pedro Jiménez https://www.linkedin.com/in/pedro-jim%C3%A9nez-castela-359490133/ */
+/* 2020 */
+
+@import 'abstracts/animations';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'themes/palette';
+
+@import 'components/accordion';
+@import 'components/buttons';
+@import 'components/drag_and_drop';
+@import 'components/forms';
+// @import 'components/charts';
+@import 'components/flips';
+@import 'components/lists';
+@import 'components/media';
+// @import 'components/messages';
+@import 'components/modals';
+@import 'components/paragraphs';
+// @import 'components/slide';
+@import 'components/questions';
+@import 'components/progress';
+@import 'components/tabs';
+// @import 'components/timeline';
+
+// @import 'layout/footer';
+@import 'layout/boxes';
+@import 'layout/space';
+// @import 'layout/header';
+@import 'layout/nav';
+
+@import 'pages/congrats';
+@import 'pages/frontpage';
+@import 'pages/infography';
+@import 'pages/instructions_modal';
+
+
+html {
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    
+    /* Rules below not implemented in browsers yet */
+    -o-user-select: none;
+    user-select: none;
+    font-size: 1.2rem;
+}
+
+@media (min-width: 1440px) {
+    html {
+        font-size: 110%; 
+    }
+}
+
+@media (max-width: $mobile-width) {
+    html {
+        font-size: 90%; 
+    }
+}
+
+body {
+    font-family: $main-font;
+    min-height: 100vh;
+    background-color: #fcfcfc;
+    overscroll-behavior-y: contain;
+    color: $font-color;
+}
+

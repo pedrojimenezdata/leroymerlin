@@ -1,0 +1,86 @@
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="79.9" height="66.6" viewBox="0 0 79.9 66.6">
+
+  <style>
+    
+  .st1{
+    fill: none;stroke: #000;stroke-linecap: round;stroke-linejoin: round;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: dash 3.5s linear;
+    stroke-width: 2;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+  }
+
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 500;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+    }
+
+    .st2{
+    opacity: 0;
+    isolation: isolate;
+    animation: opa 0.5s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+    }
+
+      @keyframes opa {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.5;
+    }
+    }
+
+  </style>
+
+  <defs>
+    <linearGradient id="Degradado_sin_nombre_3" data-name="Degradado sin nombre 3" x1="19" y1="66.48" x2="19" y2="13.63" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.01" stop-color="#f7fbfb"/>
+      <stop offset="0.07" stop-color="#d8eaeb"/>
+      <stop offset="0.14" stop-color="#bcdcdd"/>
+      <stop offset="0.22" stop-color="#a6d0d2"/>
+      <stop offset="0.31" stop-color="#95c7c9"/>
+      <stop offset="0.42" stop-color="#8ac1c3"/>
+      <stop offset="0.57" stop-color="#83bdc0"/>
+      <stop offset="1" stop-color="#81bcbf"/>
+      <stop offset="1" stop-color="#69999b"/>
+      <stop offset="1" stop-color="#507577"/>
+      <stop offset="1" stop-color="#3b5557"/>
+      <stop offset="1" stop-color="#283a3b"/>
+      <stop offset="1" stop-color="#192525"/>
+      <stop offset="1" stop-color="#0e1414"/>
+      <stop offset="1" stop-color="#060909"/>
+      <stop offset="1" stop-color="#010202"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_4" data-name="Degradado sin nombre 4" x1="64.86" y1="66.6" x2="64.86" y2="13.75" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.01" stop-color="#f7fbfb"/>
+      <stop offset="0.07" stop-color="#d8eaeb"/>
+      <stop offset="0.14" stop-color="#bcdcdd"/>
+      <stop offset="0.22" stop-color="#a6d0d2"/>
+      <stop offset="0.31" stop-color="#95c7c9"/>
+      <stop offset="0.42" stop-color="#8ac1c3"/>
+      <stop offset="0.57" stop-color="#83bdc0"/>
+      <stop offset="1" stop-color="#81bcbf"/>
+      <stop offset="1"/>
+    </linearGradient>
+  </defs>
+  <title>codigo-etico</title>
+  <path class="st2" d="M34,66.5V53.8h0a13.4,13.4,0,0,0-7.4-13h-.1l-.9-.4A8.9,8.9,0,0,1,22.8,38l-4.9-5.4A9.1,9.1,0,0,0,12.4,29l-2.1-9.8c-.5-3.3-1.6-6-4.9-5.5A1.6,1.6,0,0,0,4,15.4L6.6,38v.3c.7,3.2,3.7,5.7,6.2,7.9h0L22.6,55c.8.6,0,5.8,0,5.8M12.4,29a3.3,3.3,0,0,0-3,.4,1.6,1.6,0,0,0-.2,2.3l8.3,10.5" style="animation-delay: 0.5s; fill: url(#Degradado_sin_nombre_3)"/>
+  <path class="st2" d="M61.3,60.9s-.8-5.2-.1-5.8l11.1-8.3h0a15.4,15.4,0,0,0,4.9-8.3v-.3l2.6-22.6a1.7,1.7,0,0,0-1.5-1.7c-3.3-.4-4.3,2.3-4.9,5.5l-2,9.9A8.3,8.3,0,0,0,66,32.7l-5,5.4a7,7,0,0,1-2.8,2.3l-.8.4h-.1a13.2,13.2,0,0,0-7.4,12.9h0V66.6M66.3,42.4l8.4-10.6a1.6,1.6,0,0,0-.3-2.3c-.3-.3-1.2-.8-2.9-.3" style="animation-delay: 0.75s; fill: url(#Degradado_sin_nombre_4)"/>
+  <path class="st2" d="M59.7,5H51.6c-3.9,0-7.3,1.1-9.2,2.9l-.7.7L41,7.9C39.1,6.1,35.7,5,31.8,5H23.7a1.3,1.3,0,0,0-1.3,1.3V33.1a1.3,1.3,0,0,0,1.3,1.3h8.1c3.1,0,6.9,1.3,8.4,2.9a2,2,0,0,0,1.4.6h.3a1.8,1.8,0,0,0,1.3-.6c1.5-1.6,5.3-2.9,8.4-2.9h8.1a1.3,1.3,0,0,0,1.4-1.3h0V6.3A1.5,1.5,0,0,0,59.7,5Z" style="animation-delay: 1s; fill: #81bcbf;"/>
+
+  <path class="st1" d="M56.7,1H48.6c-3.9,0-7.3,1.1-9.2,2.9l-.7.7L38,3.9C36.1,2.1,32.7,1,28.8,1H20.7a1.3,1.3,0,0,0-1.3,1.3V29.1a1.3,1.3,0,0,0,1.3,1.3h8.1c3.1,0,6.9,1.3,8.4,2.9a2,2,0,0,0,1.4.6h.3a1.8,1.8,0,0,0,1.3-.6c1.5-1.6,5.3-2.9,8.4-2.9h8.1a1.3,1.3,0,0,0,1.4-1.3h0V2.3A1.5,1.5,0,0,0,56.7,1Z" style="animation-delay: 0.5s;"/>
+  <path class="st1" d="M31,62.5V49.8h0a13.4,13.4,0,0,0-7.4-13h-.1l-.9-.4A8.9,8.9,0,0,1,19.8,34l-4.9-5.4A9.1,9.1,0,0,0,9.4,25L7.3,15.2c-.5-3.3-1.6-6-4.9-5.5A1.6,1.6,0,0,0,1,11.4L3.6,34v.3c.7,3.2,3.7,5.7,6.2,7.9h0L19.6,51c.8.6,0,5.8,0,5.8M9.4,25a3.3,3.3,0,0,0-3,.4,1.6,1.6,0,0,0-.2,2.3l8.3,10.5" style="animation-delay: 0.75s;"/>
+  <path class="st1" d="M58.3,56.9s-.8-5.2-.1-5.8l11.1-8.3h0a15.4,15.4,0,0,0,4.9-8.3v-.3l2.6-22.6a1.7,1.7,0,0,0-1.5-1.7c-3.3-.4-4.3,2.3-4.9,5.5l-2,9.9A8.3,8.3,0,0,0,63,28.7l-5,5.4a7,7,0,0,1-2.8,2.3l-.8.4h-.1a13.2,13.2,0,0,0-7.4,12.9h0V62.6M63.3,38.4l8.4-10.6a1.6,1.6,0,0,0-.3-2.3c-.3-.3-1.2-.8-2.9-.3" style="animation-delay: 1s;"/>
+  <path class="st1" d="M38.7,30.5V4.6" style="animation-delay: 1.25s;"/>
+</svg>

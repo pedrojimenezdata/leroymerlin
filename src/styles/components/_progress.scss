@@ -1,0 +1,133 @@
+
+.set-size {
+  font-size: 2.5em;
+}
+
+.pie-wrapper {
+  height: 1em;
+  width: 1em;
+  float: left;
+  margin: 15px;
+  position: relative;
+}
+
+.pie-wrapper .pie {
+  height: 100%;
+  width: 100%;
+  clip: rect(0, 1em, 1em, 0.5em);
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.pie-wrapper .pie .half-circle {
+  height: 100%;
+  width: 100%;
+  border: 0.05em solid $brand-color;
+  border-radius: 50%;
+  clip: rect(0, 0.5em, 1em, 0);
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.pie-wrapper .label {
+  border-radius: 50%;
+  color: #7F8C8D;
+  position: absolute;
+  top: 1.2em;
+  left: 0.8em;
+  font-size: 0.25em;
+  font-family: $main-font;
+}
+.pie-wrapper .label .smaller {
+  color: #7F8C8D;
+  font-size: .75em;
+}
+
+/* 30 35 40 45 50 55 60 65 70 75 100*/
+
+.pie-wrapper.progress-5 .pie .right-side {
+  display: none;
+}
+
+.pie-wrapper.progress-5 .pie .left-side {
+  -webkit-transform: rotate(18deg);
+          transform: rotate(18deg);
+}
+
+.pie-wrapper.progress-10 .pie .right-side {
+  display: none;
+}
+
+.pie-wrapper.progress-10 .pie .left-side {
+  -webkit-transform: rotate(36deg);
+          transform: rotate(36deg);
+}
+
+.pie-wrapper.progress-15 .pie .right-side {
+  display: none;
+}
+
+.pie-wrapper.progress-15 .pie .left-side {
+  -webkit-transform: rotate(54deg);
+          transform: rotate(54deg);
+}
+
+.pie-wrapper.progress-20 .pie .right-side {
+  display: none;
+}
+
+.pie-wrapper.progress-20 .pie .left-side {
+  -webkit-transform: rotate(72deg);
+          transform: rotate(72deg);
+}
+
+.pie-wrapper.progress-40 .pie .right-side {
+  display: none;
+}
+
+.pie-wrapper.progress-40 .pie .left-side {
+  -webkit-transform: rotate(144deg);
+          transform: rotate(144deg);
+}
+
+.pie-wrapper.progress-60 .pie {
+  clip: rect(auto, auto, auto, auto);
+}
+.pie-wrapper.progress-60 .pie .right-side {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.pie-wrapper.progress-60 .pie .left-side {
+  -webkit-transform: rotate(216deg);
+          transform: rotate(216deg);
+}
+
+.pie-wrapper.progress-80 .pie {
+  clip: rect(auto, auto, auto, auto);
+}
+.pie-wrapper.progress-80 .pie .right-side {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.pie-wrapper.progress-80 .pie .left-side {
+  -webkit-transform: rotate(280deg);
+          transform: rotate(280deg);
+}
+
+.pie-wrapper.progress-100 .pie {
+  clip: rect(auto, auto, auto, auto);
+}
+.pie-wrapper.progress-100 .pie .right-side {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.pie-wrapper.progress-100 .pie .left-side {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+
+

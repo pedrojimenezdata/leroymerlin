@@ -1,0 +1,268 @@
+<div id="slide" class="body-box fade-in">
+    <div class="flex m-t" style="box-shadow: 0 1px 3px rgba(0,0,0, 0.12), 1px 0 3px rgba(0,0,0, 0.12); background-color: #005F61">
+        <div class="col-100 p">
+            <p style="color: white" class="flex j-start a-center">
+                <svg height="30" width="30" version="1.1" id="Capa_1" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:#FFFFFF;}
+                    .st1{opacity:0.46;fill:#555c61;}
+                </style>
+                <circle class="st0" cx="256" cy="256" r="248"/>
+                <path class="st1" d="M256,8C119,8,8,119.1,8,256c0,137,111,248,248,248s248-111,248-248C504,119.1,393,8,256,8z M256,118
+                    c23.2,0,42,18.8,42,42s-18.8,42-42,42s-42-18.8-42-42S232.8,118,256,118z M312,372c0,6.6-5.4,12-12,12h-88c-6.6,0-12-5.4-12-12v-24
+                    c0-6.6,5.4-12,12-12h12v-64h-12c-6.6,0-12-5.4-12-12v-24c0-6.6,5.4-12,12-12h64c6.6,0,12,5.4,12,12v100h12c6.6,0,12,5.4,12,12V372z"
+                    />
+                </svg>
+                &nbsp;&nbsp;Ejercicio interactivo:
+            </p>
+            <p style="color: white">Selecciona la opción correspondiente en la historia. Comprobarás el valor que tienen los datos personales.</p>
+        </div>
+    </div>
+    <div class="flex" style="margin-top: 20px; padding: 0; box-shadow: 0 1px 3px rgba(0,0,0, 0.12), 1px 0 3px rgba(0,0,0, 0.12);">
+        <div class="col-100">
+            <div class="multi-questions">
+                <div class="question" onclick="openQuestion(1)">
+                    <img src="img/icons/question-circle-solid.svg" alt="">
+                    <img src="img/icons/check-solid-circle.svg" alt="">
+                    <span>1. Pablo mira la pantalla de su móvil nada más despertar, pone C/Castilla nº 19.</span>
+                </div>
+                <div class="question" onclick="openQuestion(2)">
+                    <img src="img/icons/question-circle-solid.svg" alt="">
+                    <img src="img/icons/check-solid-circle.svg" alt="">
+                    <span>2. Abre la aplicación Salud para ver cómo ha dormido gracias a su pulsera inteligente.</span>
+                </div>
+                <div class="question" onclick="openQuestion(3)">
+                    <img src="img/icons/question-circle-solid.svg" alt="">
+                    <img src="img/icons/check-solid-circle.svg" alt="">
+                    <span>3. Se prepara un bol de cereales y sube una foto de ellos en Instagram.</span>
+                </div>
+                <div class="question" onclick="openQuestion(4)">
+                    <img src="img/icons/question-circle-solid.svg" alt="">
+                    <img src="img/icons/check-solid-circle.svg" alt="">
+                    <span>4. Mientras espera al autobús, compra un juego para móvil y se registra en él de forma automática con Facebook.</span>
+                </div>
+                <div class="question" onclick="openQuestion(5)">
+                    <img src="img/icons/question-circle-solid.svg" alt="">
+                    <img src="img/icons/check-solid-circle.svg" alt="">
+                    <span>5. Cuando abre la app del juego, le pide acceso a sus contactos y al calendario. Acepta.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="overlay"></div>
+<div class="questions-modal" id="questions-modal-1">
+    <div class="header-modal">
+        <span>Selecciona la opción correcta.</span>
+        <img src="img/icons/x.svg" alt="" onclick="closeQuestion(1)">
+    </div>
+    <div class="body-modal">
+        <p class="brand-text">1. Pablo mira la pantalla de su móvil nada más despertar, pone C/Castilla nº 19.</p>
+        <div class="option" onclick="selectAnswer(1, 'A')">
+            <p>A</p>
+            <p>Documenta todos sus movimientos y horas de sueño</p>
+        </div>
+        <div class="option" onclick="selectAnswer(1, 'B')">
+            <p>B</p>
+            <p>Revela su localización</p>
+        </div>
+        <div class="option" onclick="selectAnswer(1, 'C')">
+            <p>C</p>
+            <p>Avisa a la marca de que es consumidor</p>
+        </div>
+        <div class="option" onclick="selectAnswer(1, 'D')">
+            <p>D</p>
+            <p>Su agenda y actividades está en manos de terceros</p>
+        </div>
+        <div class="option" onclick="selectAnswer(1, 'E')">
+            <p>E</p>
+            <p>Acaba de dar acceso a la app a toda la información que tiene en la red social</p>
+        </div>
+    </div>
+    <div class="footer-modal">
+        <button class="brand" onclick="closeQuestion(1)">Cerrar</button>
+    </div>
+</div>
+<div class="questions-modal" id="questions-modal-2">
+    <div class="header-modal">
+        <span>Selecciona la opción correcta.</span>
+        <img src="img/icons/x.svg" alt="" onclick="closeQuestion(2)">
+    </div>
+    <div class="body-modal">
+        <p class="brand-text">2. Abre la aplicación Salud para ver cómo ha dormido gracias a su pulsera inteligente.</p>
+        <div class="option" onclick="selectAnswer(2, 'A')">
+            <p>A</p>
+            <p>Documenta todos sus movimientos y horas de sueño</p>
+        </div>
+        <div class="option" onclick="selectAnswer(2, 'B')">
+            <p>B</p>
+            <p>Revela su localización</p>
+        </div>
+        <div class="option" onclick="selectAnswer(2, 'C')">
+            <p>C</p>
+            <p>Avisa a la marca de que es consumidor</p>
+        </div>
+        <div class="option" onclick="selectAnswer(2, 'D')">
+            <p>D</p>
+            <p>Su agenda y actividades está en manos de terceros</p>
+        </div>
+        <div class="option" onclick="selectAnswer(2, 'E')">
+            <p>E</p>
+            <p>Acaba de dar acceso a la app a toda la información que tiene en la red social</p>
+        </div>
+    </div>
+    <div class="footer-modal">
+        <button class="brand" onclick="closeQuestion(2)">Cerrar</button>
+    </div>
+</div>
+<div class="questions-modal" id="questions-modal-3">
+    <div class="header-modal">
+        <span>Selecciona la opción correcta.</span>
+        <img src="img/icons/x.svg" alt="" onclick="closeQuestion(3)">
+    </div>
+    <div class="body-modal">
+        <p class="brand-text">3. Se prepara un bol de cereales y sube una foto de ellos en Instagram.</p>
+        <div class="option" onclick="selectAnswer(3, 'A')">
+            <p>A</p>
+            <p>Documenta todos sus movimientos y horas de sueño</p>
+        </div>
+        <div class="option" onclick="selectAnswer(3, 'B')">
+            <p>B</p>
+            <p>Revela su localización</p>
+        </div>
+        <div class="option" onclick="selectAnswer(3, 'C')">
+            <p>C</p>
+            <p>Avisa a la marca de que es consumidor</p>
+        </div>
+        <div class="option" onclick="selectAnswer(3, 'D')">
+            <p>D</p>
+            <p>Su agenda y actividades está en manos de terceros</p>
+        </div>
+        <div class="option" onclick="selectAnswer(3, 'E')">
+            <p>E</p>
+            <p>Acaba de dar acceso a la app a toda la información que tiene en la red social</p>
+        </div>
+    </div>
+    <div class="footer-modal">
+        <button class="brand" onclick="closeQuestion(3)">Cerrar</button>
+    </div>
+</div>
+<div class="questions-modal" id="questions-modal-4">
+    <div class="header-modal">
+        <span>Selecciona la opción correcta.</span>
+        <img src="img/icons/x.svg" alt="" onclick="closeQuestion(4)">
+    </div>
+    <div class="body-modal">
+        <p class="brand-text">4. Mientras espera al autobús, compra un juego para móvil y se registra en él de forma automática con Facebook.</p>
+        <div class="option" onclick="selectAnswer(4, 'A')">
+            <p>A</p>
+            <p>Documenta todos sus movimientos y horas de sueño</p>
+        </div>
+        <div class="option" onclick="selectAnswer(4, 'B')">
+            <p>B</p>
+            <p>Revela su localización</p>
+        </div>
+        <div class="option" onclick="selectAnswer(4, 'C')">
+            <p>C</p>
+            <p>Avisa a la marca de que es consumidor</p>
+        </div>
+        <div class="option" onclick="selectAnswer(4, 'D')">
+            <p>D</p>
+            <p>Su agenda y actividades está en manos de terceros</p>
+        </div>
+        <div class="option" onclick="selectAnswer(4, 'E')">
+            <p>E</p>
+            <p>Acaba de dar acceso a la app a toda la información que tiene en la red social</p>
+        </div>
+    </div>
+    <div class="footer-modal">
+        <button class="brand" onclick="closeQuestion(4)">Cerrar</button>
+    </div>
+</div>
+<div class="questions-modal" id="questions-modal-5">
+    <div class="header-modal">
+        <span>Selecciona la opción correcta.</span>
+        <img src="img/icons/x.svg" alt="" onclick="closeQuestion(5)">
+    </div>
+    <div class="body-modal">
+        <p class="brand-text">5. Cuando abre la app del juego, le pide acceso a sus contactos y al calendario. Acepta.</p>
+        <div class="option" onclick="selectAnswer(5, 'A')">
+            <p>A</p>
+            <p>Documenta todos sus movimientos y horas de sueño</p>
+        </div>
+        <div class="option" onclick="selectAnswer(5, 'B')">
+            <p>B</p>
+            <p>Revela su localización</p>
+        </div>
+        <div class="option" onclick="selectAnswer(5, 'C')">
+            <p>C</p>
+            <p>Avisa a la marca de que es consumidor</p>
+        </div>
+        <div class="option" onclick="selectAnswer(5, 'D')">
+            <p>D</p>
+            <p>Su agenda y actividades está en manos de terceros</p>
+        </div>
+        <div class="option" onclick="selectAnswer(5, 'E')">
+            <p>E</p>
+            <p>Acaba de dar acceso a la app a toda la información que tiene en la red social</p>
+        </div>
+    </div>
+    <div class="footer-modal">
+        <button class="brand" onclick="closeQuestion(5)">Cerrar</button>
+    </div>
+</div>
+<script>
+    function closeMessage() {
+        document.querySelectorAll('.msg')[0].style.display = 'none';
+    }
+</script>
+<script>
+    var checkEvents = [false, false, false, false, false];
+    var overlay = document.querySelectorAll('.overlay')[0];
+    var questions = document.querySelectorAll('.question');
+    var modalQuestions = document.querySelectorAll('.questions-modal');
+    var correctsQ = ['B','A','C','E','D'];
+
+    function openQuestion(e) {
+        let optionsSelector = '#questions-modal-' + e + ' .option';
+        let options = document.querySelectorAll(optionsSelector);
+        e--;
+        overlay.style.display = "block";
+        modalQuestions[e].style.display = "block";
+        setTimeout(function() {
+            overlay.style.opacity = "1";
+            modalQuestions[e].style.opacity = "1";
+        }, 10);
+    }
+
+    function closeQuestion(e) {
+        e--;
+        overlay.style.opacity = "0";
+        modalQuestions[e].style.opacity = "0";
+        setTimeout(function() {
+            overlay.style.display = "none";
+            modalQuestions[e].style.display = "none";
+        }, 300)
+    }
+
+    function selectAnswer(question, answer) {
+        if(answer === correctsQ[question - 1]) {
+            questions[question - 1].classList.add('success');
+            closeQuestion(question);
+            checkEvents[question - 1] = true;
+            if(!checkEvents.includes(false)) {
+                passPage();
+            } 
+        } else {
+            const optionsSelector = '#questions-modal-' + question + ' .option';
+            const options = document.querySelectorAll(optionsSelector);
+            for (i=0; i < options.length; i++) {
+                options[i].classList.remove('danger');
+                if(i === returnPosition(answer)) {
+                    options[i].classList.add('danger');
+                }
+            }
+        }
+    }
+</script>

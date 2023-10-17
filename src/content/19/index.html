@@ -1,0 +1,829 @@
+<div id="slide" class="body-box fade-in">
+    <div id="fail" class="fade-in">
+        <h2 class="m-t-2">Acabas de finalizar el Test, pero lamentablemente lo has suspendido.</h2>
+        <p class="m-t-2">Tu puntuación:</p>
+        <div class="flex j-center a-center">
+            <div class="circle">
+                <p id="result-fail"></p>
+            </div>
+        </div>
+        <div>
+            <button id="show-answers-fail" style="font-size: 1.3em;" class="m-r" onclick="showTest()">Revisar test</button>
+            <button style="font-size: 1.3em;" class="m-l" onclick="resetTest()">Repetir Test</button>
+        </div>
+    </div>
+
+    <div id="pre-congrats" class="fade-in">
+        <h2 class="m-t-2">Felicidades lo has superado, acabas de finalizar el Test.</h2>
+        <p class="m-t-2">Tu puntuación:</p>
+        <div class="flex j-center a-center">
+            <div class="circle">
+                <p id="result-success"></p>
+            </div>
+        </div>
+        <div>
+            <button id="show-answers-success" style="font-size: 1.3em;" class="m-r" onclick="showPassTest()">Revisar test</button>
+            <button style="font-size: 1.3em;" class="m-l" onclick="goToSuccess()">Obtener Certificado</button>
+        </div>
+    </div>
+
+    <div id="intro" class="flex a-center">
+        <div class="col-40">
+            <p><b class="brand">Ejercicio</b><br>Responde la respuesta correcta en las siguientes preguntas:</p>
+        </div>
+        <div class="tooltip m-l-2">
+            <span class="tooltiptext">
+                <p class="center m-b-2" style="font-size: 22px">Requisitos para aprobar</p>
+                <p>Para aprobar el cuestionario deberás obtener un <b class="brand">70% de aciertos</b>.</p>
+                <p>Una vez finalizado, podrás comprobar los resultados obtenidos y obtener tu certificado si pasas la prueba.</p>
+            </span>
+        </div>
+    </div>
+
+    <div id="answers" class="fade-in">
+        <h2 class="center">Respuestas</h1>
+    </div>
+
+    <div id="questions" class="fade-in">
+        <div class="col-100 m-t-2">
+            <div class="question">
+                <p class="question-text"></p>
+            </div>
+            <div class="options">
+                <div class="value value1">
+                    <p>A</p>
+                </div>
+                <div class="label label1" onclick="setAnswer(1, 0)">
+                    
+                </div>
+            </div>
+            <div class="options">
+                <div class="value value1">
+                    <p>B</p>
+                </div>
+                <div class="label label1" onclick="setAnswer(1, 1)">
+                    
+                </div>
+            </div>
+            <div class="options">
+                <div class="value value1">
+                    <p>C</p>
+                </div>
+                <div class="label label1" onclick="setAnswer(1, 2)">
+                    
+                </div>
+            </div>
+        </div>
+
+        <p class="feedback-yes-no">
+        </p>
+
+        <div class="col-100 m-t-2">
+            <div class="question">
+                <p class="question-text"></p>
+            </div>
+            <div class="options">
+                <div class="value value2">
+                    <p>A</p>
+                </div>
+                <div class="label label2" onclick="setAnswer(2, 0)">
+                    <p></p>
+                </div>
+            </div>
+            <div class="options">
+                <div class="value value2">
+                    <p>B</p>
+                </div>
+                <div class="label label2" onclick="setAnswer(2, 1)">
+                    <p></p>
+                </div>
+            </div>
+            <div class="options">
+                <div class="value value2">
+                    <p>C</p>
+                </div>
+                <div class="label label2" onclick="setAnswer(2, 2)">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <p class="feedback-yes-no">
+        </p>
+
+        <div class="col-100 m-t-2">
+            <div class="question">
+                <p class="question-text"></p>
+            </div>
+            <div class="options">
+                <div class="value value3">
+                    <p>A</p>
+                </div>
+                <div class="label label3" onclick="setAnswer(3, 0)">
+                    <p></p>
+                </div>
+            </div>
+            <div class="options">
+                <div class="value value3">
+                    <p>B</p>
+                </div>
+                <div class="label label3" onclick="setAnswer(3, 1)">
+                    <p></p>
+                </div>
+            </div>
+            <div class="options">
+                <div class="value value3">
+                    <p>C</p>
+                </div>
+                <div class="label label3" onclick="setAnswer(3, 2)">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <p class="feedback-yes-no">
+        </p>
+
+        <div class="col-100 m-t-2">
+            <div class="question">
+                <p class="question-text"></p>
+            </div>
+            <div class="options">
+                <div class="value value4">
+                    <p>A</p>
+                </div>
+                <div class="label label4" onclick="setAnswer(4, 0)">
+                    <p></p>
+                </div>
+            </div>
+            <div class="options">
+                <div class="value value4">
+                    <p>B</p>
+                </div>
+                <div class="label label4" onclick="setAnswer(4, 1)">
+                    <p></p>
+                </div>
+            </div>
+            <div class="options">
+                <div class="value value4">
+                    <p>C</p>
+                </div>
+                <div class="label label4" onclick="setAnswer(4, 2)">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <p class="feedback-yes-no">
+        </p>
+
+        <div class="col-100 m-t-2">
+            <div class="question">
+                <p class="question-text"></p>
+            </div>
+            <div class="options">
+                <div class="value value5">
+                    <p>A</p>
+                </div>
+                <div class="label label5" onclick="setAnswer(5, 0)">
+                    <p></p>
+                </div>
+            </div>
+            <div class="options">
+                <div class="value value5">
+                    <p>B</p>
+                </div>
+                <div class="label label5" onclick="setAnswer(5, 1)">
+                    <p></p>
+                </div>
+            </div>
+            <div class="options">
+                <div class="value value5">
+                    <p>C</p>
+                </div>
+                <div class="label label5" onclick="setAnswer(5, 2)">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <p class="feedback-yes-no">
+        </p>
+
+        <div class="col-100 m-t-2">
+            <div class="question">
+                <p class="question-text"></p>
+            </div>
+            <div class="options">
+                <div class="value value6">
+                    <p>A</p>
+                </div>
+                <div class="label label6" onclick="setAnswer(6, 0)">
+                    <p></p>
+                </div>
+            </div>
+            <div class="options">
+                <div class="value value6">
+                    <p>B</p>
+                </div>
+                <div class="label label6" onclick="setAnswer(6, 1)">
+                    <p></p>
+                </div>
+            </div>
+            <div class="options">
+                <div class="value value6">
+                    <p>C</p>
+                </div>
+                <div class="label label6" onclick="setAnswer(6, 2)">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <p class="feedback-yes-no">
+        </p>
+
+        <div class="col-100 m-t-2">
+            <div class="question">
+                <p class="question-text"></p>
+            </div>
+            <div class="options">
+                <div class="value value7">
+                    <p>A</p>
+                </div>
+                <div class="label label7" onclick="setAnswer(7, 0)">
+                    <p></p>
+                </div>
+            </div>
+            <div class="options">
+                <div class="value value7">
+                    <p>B</p>
+                </div>
+                <div class="label label7" onclick="setAnswer(7, 1)">
+                    <p></p>
+                </div>
+            </div>
+            <div class="options">
+                <div class="value value7">
+                    <p>C</p>
+                </div>
+                <div class="label label7" onclick="setAnswer(7, 2)">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <p class="feedback-yes-no">
+        </p>
+
+        <div class="col-100 m-t-2">
+            <div class="question">
+                <p class="question-text"></p>
+            </div>
+            <div class="options">
+                <div class="value value8">
+                    <p>A</p>
+                </div>
+                <div class="label label8" onclick="setAnswer(8, 0)">
+                    <p></p>
+                </div>
+            </div>
+            <div class="options">
+                <div class="value value8">
+                    <p>B</p>
+                </div>
+                <div class="label label8" onclick="setAnswer(8, 1)">
+                    <p></p>
+                </div>
+            </div>
+            <div class="options">
+                <div class="value value8">
+                    <p>C</p>
+                </div>
+                <div class="label label8" onclick="setAnswer(8, 2)">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <p class="feedback-yes-no">
+        </p>
+
+        <div class="col-100 m-t-2">
+            <div class="question">
+                <p class="question-text"></p>
+            </div>
+            <div class="options">
+                <div class="value value9">
+                    <p>A</p>
+                </div>
+                <div class="label label9" onclick="setAnswer(9, 0)">
+                    <p></p>
+                </div>
+            </div>
+            <div class="options">
+                <div class="value value9">
+                    <p>B</p>
+                </div>
+                <div class="label label9" onclick="setAnswer(9, 1)">
+                    <p></p>
+                </div>
+            </div>
+            <div class="options">
+                <div class="value value9">
+                    <p>C</p>
+                </div>
+                <div class="label label9" onclick="setAnswer(9, 2)">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <p class="feedback-yes-no">
+        </p>
+
+        <div class="col-100 m-t-2">
+            <div class="question">
+                <p class="question-text"></p>
+            </div>
+            <div class="options">
+                <div class="value value10">
+                    <p>A</p>
+                </div>
+                <div class="label label10" onclick="setAnswer(10, 0)">
+                    <p></p>
+                </div>
+            </div>
+            <div class="options">
+                <div class="value value10">
+                    <p>B</p>
+                </div>
+                <div class="label label10" onclick="setAnswer(10, 1)">
+                    <p></p>
+                </div>
+            </div>
+            <div class="options">
+                <div class="value value10">
+                    <p>C</p>
+                </div>
+                <div class="label label10" onclick="setAnswer(10, 2)">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <p class="feedback-yes-no">
+        </p>
+
+        <!-- <div class="col-100 m-t-2">
+            <div class="question">
+                <p class="question-text"></p>
+            </div>
+            <div class="options">
+                <div class="value value11">
+                    <p>A</p>
+                </div>
+                <div class="label label11" onclick="setAnswer(11, 0)">
+                    <p></p>
+                </div>
+            </div>
+            <div class="options">
+                <div class="value value11">
+                    <p>B</p>
+                </div>
+                <div class="label label11" onclick="setAnswer(11, 1)">
+                    <p></p>
+                </div>
+            </div>
+            <div class="options">
+                <div class="value value11">
+                    <p>C</p>
+                </div>
+                <div class="label label11" onclick="setAnswer(11, 2)">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <p class="feedback-yes-no">
+        </p>
+
+        <div class="col-100 m-t-2">
+            <div class="question">
+                <p class="question-text"></p>
+            </div>
+            <div class="options">
+                <div class="value value12">
+                    <p>A</p>
+                </div>
+                <div class="label label12" onclick="setAnswer(12, 0)">
+                    <p></p>
+                </div>
+            </div>
+            <div class="options">
+                <div class="value value12">
+                    <p>B</p>
+                </div>
+                <div class="label label12" onclick="setAnswer(12, 1)">
+                    <p></p>
+                </div>
+            </div>
+            <div class="options">
+                <div class="value value12">
+                    <p>C</p>
+                </div>
+                <div class="label label12" onclick="setAnswer(12, 2)">
+                    <p></p>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="flex j-end">
+            <button disabled id="test-btn" class="m-t-2" onclick="checkAnswer()">FINALIZAR</button>
+        </div>
+    
+    </div>
+
+    <div id="congrats" class="fade-in">
+        <h1 class="m-t-2">¡Enhorabuena!</h1>
+        <p class="m-t-2">Has realizado la formación con éxito del curso:</p>
+        <h2 class="m-b-2">"Formación en Protección de Datos"</h2>
+        <img src="img/enhorabuena-01.svg" alt="">
+        <input id="alumn-input" type="text" readonly>
+        <button style="display: block; margin: 0 auto; border-radius: 30px; font-size: 1.3em;"class="m-t-2" onclick="downloadCerti()">Descargar Certificado</button>
+    </div>
+</div>
+<script>
+    var questions = [
+        {
+            text: '¿Cuáles son las bases legitimadoras en las que una organización puede fundamentar el tratamiento de datos personales de los interesados?',
+            options: [
+                'Una organización puede fundamentar el tratamiento de datos personales sólo en el consentimiento del interesado y en su propio interés legítimo.',
+                'Una organización puede fundamentar el tratamiento de datos personales sólo en el consentimiento y en el cumplimiento de una relación contractual.',
+                'Una organización puede fundamentar el tratamiento de datos personales en el consentimiento, en el interés legítimo, en el cumplimiento de una relación contractual o en el cumplimiento de una obligación legal.'
+            ],
+            answer: 2,
+            feedback: 'Ten en cuenta: ”El RGPD prevé distintas bases de legitimación para considerar lícito un tratamiento de datos, entre las que se incluyen las opciones reflejadas en la opción C”.'
+        },
+        {
+            text: 'Si mi departamento contrata un proveedor para la prestación del servicio y necesariamente accede a datos personales que son responsabilidad de la organización ¿se debe regular de alguna manera el tratamiento realizado por el proveedor?',
+            options: [
+                'No, no es necesario regular el tratamiento de datos y solo hace falta firmar el contrato de prestación de servicios.',
+                'No, no es necesario regular el tratamiento de datos y solo hace falta firmar la orden de pedido con el proveedor.',
+                'Sí, es necesario formalizar con el proveedor un contrato de encargo de tratamiento para regular de acuerdo con la normativa, el tratamiento de datos personales derivado de la prestación del servicio.'
+            ],
+            answer: 2,
+            feedback: 'Ten en cuenta: ”La relación con un encargado del tratamiento siempre debe conllevar un acuerdo por escrito que regule las condiciones en que podrá acceder a los datos personales de nuestra responsabilidad."'
+        },
+        {
+            text: 'El RGPD resulta de aplicación a…',
+            options: [
+                'Empresas y administraciones públicas que desarrollan su actividad dentro de la UE.',
+                'Empresas situadas fuera de la UE que prestan servicios a interesados situados dentro de la UE.',
+                'Las dos anteriores son correctas.'
+            ],
+            answer: 2,
+            feedback: 'Ten en cuenta: ”El RGPD incluye en su ámbito de aplicación tanto a organizaciones ubicadas en el Espacio Económico Europeo como a organizaciones que, estando ubicadas fuera de dicho espacio, dirigen sus productos y servicios a los ciudadanos europeos”.'
+        },
+        {
+            text: 'Cuando se recaban datos personales de los interesados se debe…',
+            options: [
+                'Informar a los interesados de quién es el responsable del tratamiento, de la finalidad del tratamiento, de cuál es la justificación del tratamiento, de si se van a producir cesiones de datos, de los plazos de conservación y de la forma de ejercitar los derechos.',
+                'Informar de quién es el responsable del tratamiento y de la forma de ejercitar los derechos reconocidos por la normativa.',
+                'Informar únicamente de la forma de ejercitar los derechos reconocidos por la normativa.'
+            ],
+            answer: 0,
+            feedback: 'Ten en cuenta: ”Al momento de recabar datos personales de una persona es necesario ofrecer información completa sobre las circunstancias en que se producirá el tratamiento de sus datos personales”.'
+        },
+        {
+            text: '¿Existe en España una ley sobre protección de datos personales?',
+            options: [
+                'No, la única normativa vigente sobre protección de datos personales en España es el RGPD.',
+                'Sí, se ha aprobado recientemente una nueva ley sobre protección de datos personales en España en consonancia con el RGPD.',
+                'Está en fase de desarrollo, aún no ha sido aprobada.'
+            ],
+            answer: 1,
+            feedback: 'Ten en cuenta: ”Sí, España aprobó en diciembre de 2018 la vigente Ley Orgánica de Protección de Datos Personales y garantía de los derechos digitales".'
+        },
+        {
+            text: 'Se ha solicitado un listado de empleados a RRHH por parte de los managers para conocer qué formación han cursado sus equipos, ¿qué datos resultan excesivos y por lo tanto no deberían remitirse para lograr la finalidad perseguida?',
+            options: [
+                'Datos identificativos y de contacto.',
+                'Datos financieros y de salud.',
+                'Ninguna respuesta es correcta.'
+            ],
+            answer: 1,
+            feedback: 'Ten en cuenta: ”El conocimiento de datos financieros y de salud por parte de los managers no resultaría proporcional en atención a la finalidad declarada por la cual se solicitan los listados”.'
+        },
+        {
+            text: '¿Recuerdas cuáles son los derechos que el RGPD reconoce a los titulares de los datos?',
+            options: [
+                'Derecho de acceso, rectificación, supresión y oposición.',
+                'Derecho de acceso, rectificación, supresión, oposición y limitación del tratamiento.',
+                'Derecho de acceso, rectificación, supresión, oposición, limitación del tratamiento, no ser objeto de decisiones automatizadas y portabilidad.'
+            ],
+            answer: 2,
+            feedback: 'Ten en cuenta: ”Con la entrada en aplicación del RGPD se incluyeron nuevos derechos de los interesados. Actualmente, todos contamos con el derecho a acceder, rectificar, portar, y suprimir nuestros datos, a no ser objeto de decisiones automatizadas y a oponernos y limitar el tratamiento realizado”.'
+        },
+        {
+            text: '¿Crees que una dirección IP es un dato personal?',
+            options: [
+                'Si, porque permite identificar a la persona.',
+                'No, porque en ningún caso permite identificar a la persona.',
+                'Si porque al igual que el nombre y apellidos, identifica claramente a la persona.'
+            ],
+            answer: 0,
+            feedback: 'Ten en cuenta: ”Si bien la dirección IP no identifica directamente a una persona física, sí permite lograr su identificación"'
+        },
+        {
+            text: 'Si recibieras directamente una solicitud de ejercicio de derechos, ¿qué pasos debes seguir?',
+            options: [
+                'No debo hacer nada porque no está entre mis funciones.',
+                'Debo remitirlo con toda la información disponible, al área de la compañía que se encargue de su gestión o en su defecto al DPO.',
+                'Debo contestar directamente al solicitante denegándole la solicitud.'
+            ],
+            answer: 1,
+            feedback: 'Ten en cuenta: ”Aunque entre mis funciones no se encuentre atender solicitudes de derechos, los interesados pueden plantear sus solicitudes por cualquier medio de contacto válido. Así, y para garantizar que nuestra organización cumple sus obligaciones, todos debemos colaborar en la gestión diligente de las solicitudes, remitiendo a la función especializada a cargo de esta tarea aquellas solicitudes que podamos recibir”.'
+        },
+        {
+            text: 'Si necesitases asesoramiento en materia de privacidad a quién debes acudir',
+            options: [
+                'Debo contactar con el DPO o en su caso al departamento encargado de la gestión de privacidad en la organización.',
+                'Debo acudir al departamento de marketing.',
+                'Debo acudir al departamento de contabilidad.'
+            ],
+            answer: 0,
+            feedback: 'Ten en cuenta: ”La oficina de DPO se encarga, entre otras cuestiones, de asesorar en relación con el cumplimiento de la normativa de protección de datos personales. Plantearle aquellas dudas que nos puedan surgir, así como involucrarla desde el comienzo de cualquier nuevo proyecto, contribuye a aumentar el grado de cumplimiento de la organización”.'
+        },
+        // {
+        //     text: 'La empresa para la cual trabajas tiene contratada la prestación, por parte de un proveedor externo, la prestación de un servicio de gestión de nóminas. Este proveedor externo, a su vez, trabaja con una empresa que le presta servicios de consultoría informática y almacenamiento de información. ¿Cuál de las siguientes afirmaciones es correcta?',
+        //     options: [
+        //         'La empresa para la que trabajo y su asesoría laboral serían co-responsables del tratamiento, y la empresa de consultoría informática sería encargada del tratamiento.',
+        //         'La empresa para la que trabajo sería responsable del tratamiento, su asesoría laboral sería encargada del tratamiento, y la empresa de consultoría informática sería sub-encargada del tratamiento.',
+        //         'La empresa para la que trabajo sería responsable del tratamiento, y su asesoría laboral y la empresa de consultoría informática serían ambas encargadas del tratamiento.'
+        //     ],
+        //     answer: 0,
+        //     feedback: 'Ten en cuenta: ”Aunque finalice nuestra relación con el interesado y sus datos puedan conservarse bloqueados un periodo de tiempo razonable (para cumplir con nuestra obligaciones legales), esta conservación no puede ser por tiempo indefinido.'
+        // },
+        {
+            text: 'Ante las siguientes afirmaciones, selecciona la respuesta correcta:',
+            options: [
+                'Los datos personales pueden tratarse hasta finalizar la relación con su titular, y después se pueden conservar debidamente bloqueados de forma indefinida.',
+                'Los datos personales de un cliente se pueden conservar siempre que este mantenga relación con la empresa, pudiendo enriquecer la información  que conocemos del cliente por medio de datos obtenidos de otras fuentes (por ejemplo, redes sociales o motores de búsqueda en internet).',
+                'Las dos conductas descritas en las anteriores respuestas serían contrarias a la normativa de protección de datos personales.'
+            ],
+            answer: 2,
+            feedback: 'Ten en cuenta: ”Aunque finalice nuestra relación con el interesado y sus datos puedan conservarse bloqueados un periodo de tiempo razonable (para cumplir con nuestra obligaciones legales), esta conservación no puede ser por tiempo indefinido.'
+        },
+        {
+            text: 'Cuando recabamos datos personales de interesados, debemos…',
+            options: [
+                'Compartirlos con compañeros de otros departamentos, por si les resultan útiles.',
+                'Informar de forma transparente sobre el tratamiento que vamos a realizar, incluyendo, entre otras cuestiones, información sobre los derechos que asisten al interesado.',
+                'Pedir siempre, por si acaso, un consentimiento para enviar publicidad.',
+            ],
+            answer: 1,
+            feedback: 'Ten en cuenta: ”La transparencia con los afectados es una obligación expresamente impuesta a los responsables del tratamiento. Entre otras cuestiones, siempre que recabemos un dato personal deberemos informar acerca de los derechos con los que cuenta su titular”.'
+        },
+    ]
+    var numberQuestions = 10;
+    var questionsSelected;
+    var value;
+    var values = [];
+    var labels = [];
+    var answered = [];
+    var alumn = document.getElementById('alumn-input');
+
+    var questionsTextElements = document.querySelectorAll('.question-text');
+    var feedbacksDiv = document.querySelectorAll('.feedback-yes-no');
+
+    if (resultFinalTest !== 0 ) {
+        document.getElementById('intro').style.display = "none";
+        document.getElementById('questions').style.display = "none";
+        if(resultFinalTest >= 7) {
+            document.getElementById('result-success').innerHTML = resultFinalTest + '/' + numberQuestions;
+            document.getElementById('pre-congrats').style.display = "block";
+            document.getElementById('show-answers-success').style.display = "none";
+        } else {
+            for (i = 0; i < numberQuestions; i++) {
+                values.push(document.getElementsByClassName("value" + (i + 1)));
+                labels.push(document.getElementsByClassName("label" + (i + 1)));
+                answered.push(null);
+            }
+            document.getElementById('result-fail').innerHTML = resultFinalTest + '/' + numberQuestions;
+            document.getElementById('fail').style.display = "block";
+            document.getElementById('show-answers-fail').style.display = "none";
+        }
+    } else {
+        loadQuestions();
+    }
+
+    function loadQuestions () {
+        questionsSelected = [];
+        // value;
+        values = [];
+        labels = [];
+        answered = [];
+        for (i = 0; i < numberQuestions; i++) {
+            values.push(document.getElementsByClassName("value" + (i + 1)));
+            labels.push(document.getElementsByClassName("label" + (i + 1)));
+            answered.push(null);
+        }
+        var questionsStore = [];
+        questionsStore = questionsStore.concat(questions);
+        for (i = 0; i < numberQuestions; i++) {
+            let elem = questionsStore.splice(Math.floor(Math.random()*questionsStore.length), 1)[0];
+            questionsSelected.push(elem);
+        } 
+        for(i = 0; i < questionsTextElements.length; i++) {
+            questionsTextElements[i].innerHTML = ( i + 1 ) + '. ' + questionsSelected[i].text;
+            var selector = '.label' + (i + 1);
+            var optionsTextElements = document.querySelectorAll(selector);
+            for(j = 0; j < optionsTextElements.length; j++) {
+                optionsTextElements[j].innerHTML = '<p>' + questionsSelected[i].options[j] + '</p>';
+            }
+        }
+    }
+
+    function setAnswer(e, value) {
+        e--;
+        for(i = 0; i < labels[e].length; i++ ) {
+            labels[e][i].classList.remove('checked');
+        }
+        labels[e][value].classList.add('checked');
+        answered[e] = value;
+        unlockButton();
+    }
+
+    function unlockButton () {
+        var nulls = 0;
+        for (i = 0; i < answered.length; i++) {
+            if(answered[i] === null) {
+                nulls++;
+            } 
+        }
+        if (nulls === 0) {
+            document.getElementById('test-btn').disabled = false;
+        }
+    }
+
+    function checkAnswer() {
+
+        resultFinalTest = 0;
+        for (i = 0; i < numberQuestions; i++) {
+            if(answered[i] === questionsSelected[i].answer) {
+                resultFinalTest++;
+            } 
+        }
+        setState();
+        document.getElementById('intro').style.display = "none";
+        document.getElementById('questions').style.display = "none";
+        if(resultFinalTest / numberQuestions >= 0.7) {
+            passPage();
+            document.getElementById('result-success').innerHTML = resultFinalTest + '/' + answered.length;
+            document.getElementById('pre-congrats').style.display = "block";
+        } else {
+            document.getElementById('show-answers-fail').style.display = "inline";
+            document.getElementById('result-fail').innerHTML = resultFinalTest + '/' + answered.length;
+            document.getElementById('fail').style.display = "block";
+        }
+    }
+    function showTest() {
+        for (i = 0; i < numberQuestions; i++) {
+            for(j = 0; j < 3; j++ ) {
+                labels[i][j].classList.remove('checked');
+                if (j === questionsSelected[i].answer) {   
+                    values[i][j].classList.add('correct');
+                    labels[i][j].classList.add('correct');
+                } else if (j !== questionsSelected[i].answer && j === answered[i]) {
+                    values[i][j].classList.add('incorrect');
+                    labels[i][j].classList.add('incorrect');
+                } else {
+                    values[i][j].classList.add('not-touched');
+                }
+            }
+            feedbacksDiv[i].style.display = 'block';
+            if (questionsSelected[i].answer === answered[i]) {
+                if (questionsSelected[i].answer === 0) {
+                    feedbacksDiv[i].innerHTML = '<p><span style="color: #70D990">Acertaste, efectivamente la respuesta correcta es la A. </span>' + questionsSelected[i].feedback + '</p>';
+                } else if (questionsSelected[i].answer === 1) {
+                    feedbacksDiv[i].innerHTML = '<p><span style="color: #70D990">Acertaste, efectivamente la respuesta correcta es la B. </span>' + questionsSelected[i].feedback + '</p>';
+                } else if (questionsSelected[i].answer === 2) {
+                    feedbacksDiv[i].innerHTML = '<p><span style="color: #70D990">Acertaste, efectivamente la respuesta correcta es la C. </span>' + questionsSelected[i].feedback + '</p>';
+                } 
+            } else {
+                if (questionsSelected[i].answer === 0) {
+                    feedbacksDiv[i].innerHTML = '<p><span style="color: #dd6363">No has acertado, la respuesta correcta es la A. </span>' + questionsSelected[i].feedback + '</p>';
+                } else if (questionsSelected[i].answer === 1) {
+                    feedbacksDiv[i].innerHTML = '<p><span style="color: #dd6363">No has acertado, la respuesta correcta es la B. </span>' + questionsSelected[i].feedback + '</p>';
+                } else if (questionsSelected[i].answer === 2) {
+                    feedbacksDiv[i].innerHTML = '<p><span style="color: #dd6363">No has acertado, la respuesta correcta es la C. </span>' + questionsSelected[i].feedback + '</p>';
+                } 
+            }
+        }
+        document.getElementById('show-answers-fail').style.display = "none";
+        document.getElementById('answers').style.display = "block";
+        document.getElementById('questions').style.display = "block";
+        document.getElementById('test-btn').style.display = "none";
+        $('html, body').animate({
+            scrollTop: document.getElementById('answers').offsetTop - 120
+        }, 400);
+    }
+
+    function showPassTest() {
+        for (i = 0; i < numberQuestions; i++) {
+            for(j = 0; j < 3; j++ ) {
+                labels[i][j].classList.remove('checked');
+                if (j === questionsSelected[i].answer) {   
+                    values[i][j].classList.add('correct');
+                    labels[i][j].classList.add('correct');
+                } else if (j !== questionsSelected[i].answer && j === answered[i]) {
+                    values[i][j].classList.add('incorrect');
+                    labels[i][j].classList.add('incorrect');
+                } else {
+                    values[i][j].classList.add('not-touched');
+                } 
+            }
+            feedbacksDiv[i].style.display = 'block';
+            if (questionsSelected[i].answer === answered[i]) {
+                if (questionsSelected[i].answer === 0) {
+                    feedbacksDiv[i].innerHTML = '<p><span style="color: #70D990">Acertaste, efectivamente la respuesta correcta es la A. </span>' + questionsSelected[i].feedback + '</p>';
+                } else if (questionsSelected[i].answer === 1) {
+                    feedbacksDiv[i].innerHTML = '<p><span style="color: #70D990">Acertaste, efectivamente la respuesta correcta es la B. </span>' + questionsSelected[i].feedback + '</p>';
+                } else if (questionsSelected[i].answer === 2) {
+                    feedbacksDiv[i].innerHTML = '<p><span style="color: #70D990">Acertaste, efectivamente la respuesta correcta es la C. </span>' + questionsSelected[i].feedback + '</p>';
+                } 
+            } else {
+                if (questionsSelected[i].answer === 0) {
+                    feedbacksDiv[i].innerHTML = '<p><span style="color: #dd6363">No has acertado, la respuesta correcta es la A. </span>' + questionsSelected[i].feedback + '</p>';
+                } else if (questionsSelected[i].answer === 1) {
+                    feedbacksDiv[i].innerHTML = '<p><span style="color: #dd6363">No has acertado, la respuesta correcta es la B. </span>' + questionsSelected[i].feedback + '</p>';
+                } else if (questionsSelected[i].answer === 2) {
+                    feedbacksDiv[i].innerHTML = '<p><span style="color: #dd6363">No has acertado, la respuesta correcta es la C. </span>' + questionsSelected[i].feedback + '</p>';
+                } 
+            }
+        }
+
+        document.getElementById('show-answers-success').style.display = "none";
+        document.getElementById('answers').style.display = "block";
+        document.getElementById('questions').style.display = "block";
+        document.getElementById('test-btn').style.display = "none";
+        $('html, body').animate({
+            scrollTop: document.getElementById('answers').offsetTop - 120
+        }, 400);
+    }
+
+    function resetTest() {
+        document.getElementById('fail').style.display = "none";
+        document.getElementById('answers').style.display = "none";
+        resultFinalTest = 0;
+        setState();
+        for (i = 0; i < numberQuestions; i++) {
+            for(j = 0; j < 3; j++ ) {
+                labels[i][j].classList.remove('checked');
+                values[i][j].classList.remove('correct');
+                labels[i][j].classList.remove('correct');
+                values[i][j].classList.remove('incorrect');
+                labels[i][j].classList.remove('incorrect');
+                values[i][j].classList.remove('not-touched');
+            }
+            feedbacksDiv[i].style.display = 'none';
+        }
+        loadQuestions();
+        document.getElementById('intro').style.display = "flex";
+        document.getElementById('questions').style.display = "block";
+        document.getElementById('test-btn').disabled = true;
+        document.getElementById('test-btn').style.display = "block";
+    }
+
+
+    function goToSuccess() {
+        document.getElementById('pre-congrats').style.display = "none";
+        document.getElementById('answers').style.display = "none";
+        document.getElementById('questions').style.display = "none";
+        document.getElementById('congrats').style.display = "block";
+        if (ScormProcessGetValue("cmi.core.student_name")) {
+            learner_name = ScormProcessGetValue("cmi.core.student_name");
+            alumn.value = learner_name;
+        } 
+    }
+
+    jsPDF
+
+    var { jsPDF } = window.jspdf;
+    var doc = new jsPDF('l', 'mm', [297, 210]);
+    var isIOS = /iPad|iPhone|iPod/.test(navigator.platform) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+    
+    function downloadCerti() {
+        doc.addImage("docs/certificado.jpg", "JPEG", 0, 0, 297, 210);
+        doc.setFontSize(24);
+        doc.setTextColor(83, 104, 120);
+        doc.text(alumn.value, 151, 95, 'center');
+        if (isIOS) {
+            doc.output('dataurlnewwindow', 'certificado.pdf'); 
+        } else {
+            doc.save('certificado.pdf');
+        }
+    }
+
+</script>

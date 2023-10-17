@@ -1,0 +1,214 @@
+<style>
+
+</style>
+<div id="slide" class="body-box fade-in trama up">
+    <div class="flex j-space-between">
+        <div class="flex m-t-2 j-space-around">
+            <div style="background-color: #7B6469; color: white; box-shadow: 0 1px 3px rgba(0,0,0, 0.12), 1px 0 3px rgba(0,0,0, 0.12);" class="col-30 p">
+                <p>El RGPD define una serie de actores que por sus características suelen intervenir en mayor o menor medida en las operaciones de tratamiento de datos personales.</p>
+            </div>
+            <div style="background-color: white; box-shadow: 0 1px 3px rgba(0,0,0, 0.12), 1px 0 3px rgba(0,0,0, 0.12);" class="col-60 p flex j-start a-center">
+                <div class="col-50">
+                    <p style="margin-bottom: 0;"><b class="brand">1.</b> Interesado.</p>
+                    <p style="margin-bottom: 0;"><b class="brand">2.</b> Responsable del tratamiento</p>
+                    <p style="margin-bottom: 0;"><b class="brand">3.</b> Encargado del tratamiento</p>
+                    <p style="margin-bottom: 0;"><b class="brand">4.</b> Cesionario</p>
+                </div>
+                <div class="col-50">
+                    <p style="margin-bottom: 0;"><b class="brand">5.</b> Responsable de la privacidad “DPO”</p>
+                    <p style="margin-bottom: 0;"><b class="brand">6.</b> Gestores del dato</p>
+                    <p style="margin-bottom: 0;"><b class="brand">7.</b> Responsable de seguridad</p>
+                    <p style="margin-bottom: 0;"><b class="brand">8.</b> Usuarios</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-100 instructions m-t-2">
+        <p class="flex a-center">
+            <img height="40px" src="img/icons/circle-info-solid.svg" alt="">
+            &nbsp;&nbsp;Haz "click" en los números para mostrar la información:
+        </p>
+    </div>
+    <div id="infograph" class="info-pics slide-in-bottom">
+       <div id="pic-2">
+            <div class="number slide-in-top" style="animation-delay: 500ms;" id="number-dos" onclick="showInfo(2)" onmouseover="showing(2)" onmouseout="showing2()">
+                2
+            </div>
+            <img class="pic"  id="pic-dos" src="img/infografia-partes-02.svg" alt="">
+       </div> 
+       <div id="pic-3">
+            <div class="number slide-in-top" style="animation-delay: 500ms;" id="number-tres" onclick="showInfo(3)" onmouseover="showing(3)" onmouseout="showing2()">
+                3
+            </div>
+            <img class="pic" id="pic-tres" src="img/infografia-partes-03.svg" alt="">
+       </div>
+        <div id="pic-1">
+            <div class="number slide-in-top" style="animation-delay: 500ms;" id="number-uno" onclick="showInfo(1)" onmouseover="showing(1)" onmouseout="showing2()">
+                1
+            </div>
+            <img class="pic" id="pic-uno" src="img/infografia-partes-01.svg" alt="">
+        </div>
+       <div id="pic-4">
+            <div class="number slide-in-top" style="animation-delay: 500ms;" id="number-cuatro" onclick="showInfo(4)" onmouseover="showing(4)" onmouseout="showing2()">
+                4
+            </div>
+            <img class="pic" id="pic-cuatro" src="img/infografia-partes-04.svg" alt="">
+       </div>
+       <div id="pic-5">
+            <div class="number slide-in-top" style="animation-delay: 500ms;" id="number-cinco" onclick="showInfo(5)" onmouseover="showing(5)" onmouseout="showing2()">
+                5
+            </div>
+            <img class="pic" id="pic-cinco" src="img/infografia-partes-05.svg" alt="">
+       </div>
+       <div id="pic-6">
+            <div class="number slide-in-top" style="animation-delay: 500ms;" id="number-seis" onclick="showInfo(6)" onmouseover="showing(6)" onmouseout="showing2()">
+                6
+            </div>
+            <img class="pic" id="pic-seis" src="img/infografia-partes-06.svg" alt="">
+       </div>
+       <div id="pic-7">
+            <div class="number slide-in-top" style="animation-delay: 500ms;" id="number-siete" onclick="showInfo(7)" onmouseover="showing(7)" onmouseout="showing2()">
+                7
+            </div>
+            <img class="pic" id="pic-siete" src="img/infografia-partes-07.svg" alt="">
+       </div>
+       <div id="pic-8">
+            <div class="number slide-in-top" style="animation-delay: 500ms;" id="number-ocho" onclick="showInfo(8)" onmouseover="showing(8)" onmouseout="showing2()">
+                8
+            </div>
+            <img class="pic" id="pic-ocho" src="img/infografia-partes-08.svg" alt="">
+       </div>
+        <div class="modal-info">
+            <div class="header">
+                <h1>1. Interesado.</h1>
+                <img onclick="closeModal()" src="img/close.svg" alt="">
+            </div>
+            <p>
+                Se trata de la persona física titular de los datos personales tratados y que por lo tanto está identificada o se puede llegar a identificar.
+            </p>    
+            <p>
+                <b class="brand">Por ejemplo</b>, el interesado es el candidato que acude a un proceso de selección, o el visitante que pasa por el control de acceso a las instalaciones de la organización.
+            </p>    
+        </div>
+        <div class="modal-info">
+            <div class="header">
+                <h1>2. Responsable del tratamiento</h1>
+                <img onclick="closeModal()" src="img/close.svg" alt="">
+            </div>
+            <p>
+                Se trata de la persona física o jurídica, autoridad pública, organismo o servicio, que determina la finalidad para la cual se tratan los datos personales y los medios utilizados para llevar a cabo dicho tratamiento.            </p>    
+            <p>
+                <b class="brand">Por ejemplo</b>, la organización es responsable del tratamiento de los datos personales de sus colaboradores, de sus clientes y de sus proveedores y decide sobre la finalidad del tratamiento de los datos personales de los interesados de cada colectivo.
+            </p>            
+        </div>
+        <div class="modal-info">
+            <div class="header">
+                <h1>3. Encargado del tratamiento</h1>
+                <img onclick="closeModal()" src="img/close.svg" alt="">
+            </div>
+            <p>Se trata de la persona física o jurídica, autoridad pública, organismo o servicio, que presta un servicio al responsable del tratamiento que necesariamente implica el tratamiento de los datos personales de su responsabilidad.</p>
+            <p>
+                <b class="brand">Por ejemplo</b>, la empresa contratada por la organización para la gestión de las nóminas es encargada del tratamiento, ya que la prestación del servicio implica necesariamente el tratamiento de los datos personales de los empleados para el pago de la nómina, la retención del IRPF, el pago de la cuota de la Seguridad Social, etc.
+            </p>    
+        </div>
+        <div class="modal-info">
+            <div class="header">
+                <h1>4. Cesionario</h1>
+                <img onclick="closeModal()" src="img/close.svg" alt="">
+            </div>
+            <p>Se trata de la persona física o jurídica, autoridad pública, organismo o servicio, que recibe los datos de un responsable del tratamiento y los trata para alcanzar una finalidad propia sin prestar un servicio al responsable.</p>
+            <p><b class="brand">Por ejemplo</b>, la administración tributaria es el cesionario de los datos personales que le facilita la organización para la gestión del impuesto sobre la renta de las personas físicas relativo a sus empleados.</p> 
+        </div>
+        <div class="modal-info">
+            <div class="header">
+                <h1>5. Responsable de la privacidad “DPO”</h1>
+                <img onclick="closeModal()" src="img/close.svg" alt="">
+            </div>
+            <!-- video4 -->
+            <!-- <video width="100%" controls src="https://s3-eu-west-1.amazonaws.com/cdn2.culturacompliance.com/elearning/isms-forum/privacidad/video/d053f2e4f2ab29781d3f7cb8f2658c9a717aae41_es.mp4"></video> -->
+            <video width="100%" controls src="video/04_Delegado_de_Proteccion_Datos_Leroy.mp4"></video>
+        </div>
+        <div class="modal-info">
+            <div class="header">
+                <h1>6. Gestores del dato</h1>
+                <img onclick="closeModal()" src="img/close.svg" alt="">
+            </div>
+            <p>
+                Se trata de los responsables internos del tratamiento, es decir, personas que dentro de la organización son responsables del tratamiento de los datos personales de determinados colectivos y deben liderar el cumplimiento de todas las medidas jurídicas, técnicas y organizativas definidas en la organización para dar cumplimiento al RGPD.
+            </p>
+            <p>
+                Además de lo anterior, los gestores del dato deben actuar como nexo entre los usuarios que llevan a cabo el tratamiento de datos en el desempeño de sus funciones y el DPO.
+            </p>
+        </div>
+        <div class="modal-info">
+            <div class="header">
+                <h1>7. Responsable de seguridad</h1>
+                <img onclick="closeModal()" src="img/close.svg" alt="">
+            </div>
+            <p>Se trata de las personas que dentro de la organización tienen asumidas las funciones de diseño e implantación de medidas de seguridad técnicas encaminadas a garantizar la confidencialidad, integridad y disponibilidad de los datos personales en conjunción con las instrucciones del DPO. La oficina de privacidad de Leroy Merlin está a vuestra disposición en <a href="mailto:privacidad@leroymerlin.es">privacidad@leroymerlin.es</a>.</p>
+        </div>
+        <div class="modal-info">
+            <div class="header">
+                <h1>8. Usuarios</h1>
+                <img onclick="closeModal()" src="img/close.svg" alt="">
+            </div>
+            <p>Se trata del conjunto de empleados de la organización que trata datos personales en el desempeño de sus funciones y que necesariamente debe atender las normas, procedimientos y directrices establecidas para garantizar el cumplimiento del RGPD y en consecuencia la protección de los datos personales.</p>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.fancybox.min.js"></script>
+<script>
+    var checkEvents = [false, false, false, false, false, false, false, false];
+    var imgs = document.querySelectorAll(".pic");
+    var nums = document.querySelectorAll(".number");
+    var modals = document.querySelectorAll(".modal-info");
+    function showing(e) {
+        e--
+        for (i = 0; i < imgs.length; i++) {
+            if(i !== e) {
+                imgs[i].style.opacity = 0.1;
+            }
+        }
+    }
+    function showing2() {
+        for (i = 0; i < imgs.length; i++) {
+            imgs[i].style.opacity = 1;
+        }
+    }
+    function showInfo(e) {
+        e--
+        if (e === 0) {
+            nums[2].classList.add('checked');
+        } else if(e === 1) {
+            nums[0].classList.add('checked');
+        } else if(e === 2) {
+            nums[1].classList.add('checked');
+        } else {
+            nums[e].classList.add('checked');
+        }
+        checkEvents[e] = true;
+        if(!checkEvents.includes(false)) {
+            passPage();
+        }
+        for (i = 0; i < imgs.length; i++) {
+            nums[i].style.display = 'none';
+            if(i == e) {
+                imgs[i].classList.add('open');
+                modals[i].style.display = "block";
+            } else {
+                imgs[i].style.display = 'none';
+            }
+        }
+        $('html, body').animate({
+            scrollTop: 160
+        }, 400);
+    }
+    function closeModal() {
+        for (i = 0; i < imgs.length; i++) {
+            modals[i].style.display = "none";
+            nums[i].style.display = 'flex';
+            imgs[i].classList.remove('open');
+            imgs[i].style.display = 'block';
+        }
+    }
+</script>

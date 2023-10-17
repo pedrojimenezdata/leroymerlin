@@ -1,0 +1,77 @@
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" width="43.7" height="51.4" viewBox="0 0 43.7 51.4">
+
+  <style>
+    
+    .st1{stroke-width: 1.5;}
+    .st2{stroke-width: 0.75;}
+
+  .st1, .st2{
+    fill: none;stroke: #000;stroke-linecap: round;stroke-linejoin: round;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: dash 3.5s linear;
+  
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+  }
+
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 500;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+    }
+
+    .bk, .bk2{
+    fill: #81bcbf;
+    opacity: 0;
+    isolation: isolate;
+    animation: opa 0.5s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+    }
+
+      @keyframes opa {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.3;
+    }
+    }
+
+    .bk2{fill: #000; 
+    opacity: 0;
+    animation: opa2 0.5s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    }
+
+      @keyframes opa2 {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+    }
+
+
+
+
+  </style>
+
+  <title>comunication</title>
+  <g>
+    <path class="bk" d="M40.8,4h-15a2.9,2.9,0,0,0-2.9,2.9V38.8a2.3,2.3,0,0,0,.3,1.1l-.6.2h-.8a51.9,51.9,0,0,1-4.9-8,36,36,0,0,1-3.1-8.8h.1c.1-.1.1-.2.3-.3A7.9,7.9,0,0,1,16.1,22L18,21c.3-.3.6-.4.8-.8a1.5,1.5,0,0,0,0-1.3l-3.2-6.6a4,4,0,0,0-1.4-1.9l-.3-.2a4.1,4.1,0,0,0-2.2,0h-.2c-4.8,2.3-6.8,6.5-7.1,11.3S5.7,31.7,8.1,36.5s5.5,9.3,9.3,12.1,8.4,3.8,13.2,1.5h.3a3.2,3.2,0,0,0,1.4-2,3.9,3.9,0,0,0-.4-2.3l-2-4H40.8a2.8,2.8,0,0,0,2.9-2.9V6.9A2.7,2.7,0,0,0,40.8,4Z" style=""/>
+
+    <path class="st1" d="M10.2,8.9A2.8,2.8,0,0,0,8,8.9H7.8C3.1,11.3,1,15.5.8,20.3s1.3,10,3.6,14.8,5.6,9.4,9.4,12.2,8.4,3.8,13.2,1.5h.2a3.3,3.3,0,0,0,1.5-2,5.2,5.2,0,0,0-.5-2.4l-3.1-6.6a1.8,1.8,0,0,0-1.1-.8,2,2,0,0,0-1.1.2l-2,.8a7.1,7.1,0,0,1-1.9.8l-.6.2h-.2a52.5,52.5,0,0,1-5-7.9,40.8,40.8,0,0,1-3.1-8.8h.2c.1,0,.1-.2.3-.3a8.2,8.2,0,0,1,1.9-1l1.9-1.1a2.7,2.7,0,0,0,.8-.7,1.5,1.5,0,0,0,0-1.3L12,11a3.5,3.5,0,0,0-1.4-1.9Z" style=""/>
+    <path class="st1" d="M25.8,38.5H36.7a2.8,2.8,0,0,0,2.9-2.8V3.8a3,3,0,0,0-2.9-3h-15a2.8,2.8,0,0,0-2.9,2.8V35.7a2.9,2.9,0,0,0,1.3,2.4" style=""/>
+    <circle class="bk2" cx="29.2" cy="35.7" r="0.9"/>
+    <line class="st2" x1="26.9" y1="3.5" x2="31.4" y2="3.5" style=""/>
+    <line class="st2" x1="39.6" y1="5.8" x2="18.6" y2="5.8" style=""/>
+    <line class="st2" x1="18.6" y1="33.5" x2="39.6" y2="33.5" style=""/>
+  </g>
+</svg>

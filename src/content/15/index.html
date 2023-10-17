@@ -1,0 +1,77 @@
+<div id="slide" class="body-box fade-in trama">
+    <div class="flex slide-in-left p-2" style="box-shadow: 0 1px 3px rgba(0,0,0, 0.12), 1px 0 3px rgba(0,0,0, 0.12);">
+        <p style="margin: 0 0 0 10px">
+            Para cumplir con las obligaciones que la normativa impone en relación con el ejercicio de derechos, la organización tiene establecidos:
+        </p>
+        <ul>
+            <li>Canales para la recepción de solicitudes de ejercicio de los derechos reconocidos para los interesados.</li>
+            <li>Medios que garantizan la correcta gestión de estos derechos en tiempo y forma.</li>
+        </ul>
+    </div>
+    <div class="flex m-t-2 slide-in-left" style="box-shadow: 0 1px 3px rgba(0,0,0, 0.12), 1px 0 3px rgba(0,0,0, 0.12); background-color: #005F61">
+        <div class="col-100 p flex j-start a-center" style="flex-wrap: nowrap">
+            <img height="40px" src="img/icons/circle-info-solid.svg" alt="">
+            <p style="color: white; margin: 0 0 0 10px">
+                Haz click en las siguientes tarjetas para girarlas.
+            </p>
+        </div>
+    </div>
+    <div class="flips-row j-space-around">
+        <div class="flips-col">
+            <div class="flip-card" onclick="showFlip(1)">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front p-t-2 p-b p-l-2 p-r-2 flex-column j-space-between a-center">
+                        <div class="col-50 m-b">
+                            <p class="center"><b>Pautas a seguir</b></p>
+                        </div>
+                        <img style="height: 120px"src="img/icons/file-lines-solid.svg">
+                        <img style="align-self: flex-end; width: 50px; border-radius: 50%; box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.1);" src="img/changeCard.svg" alt="">
+                    </div>
+                    <div class="flip-card-back p-t-2 p-b p-l-2 p-r-2 flex-column a-center">
+                        <p>Las solicitudes deben ser <b>contestadas siempre</b>, evitando de esta manera posibles reclamaciones del interesado ante la autoridad de control y con independencia de que la solicitud deba ser estimada, rechazada o completada.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flips-col">
+            <div class="flip-card" onclick="showFlip(2)">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front p-t-2 p-b p-l-2 p-r-2 flex-column j-space-between a-center">
+                        <div class="col-50 m-b">
+                            <p class="center"><b>Plazos</b></p>
+                        </div>
+                        <img style="height: 120px"src="img/icons/calendar-days-solid.svg">
+                        <img style="align-self: flex-end; width: 50px; border-radius: 50%; box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.1);" src="img/changeCard.svg" alt="">
+                    </div>
+                    <div class="flip-card-back p-t-2 p-b p-l-2 p-r-2 flex-column a-center">
+                        <p>El plazo de respuesta es de <b>1 mes</b> desde la recepción de estas solicitudes y resulta preciso guardar evidencias de las respuestas realizadas en cumplimiento del principio de accountability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex m-t-2 slide-in-left" style="box-shadow: 0 1px 3px rgba(0,0,0, 0.12), 1px 0 3px rgba(0,0,0, 0.12); background-color: #7B6469">
+        <div class="col-100 p flex j-start a-center" style="flex-wrap: nowrap">
+            <img height="40px" src="img/icons/circle-info-solid.svg" alt="">
+            <p style="color: white; margin: 0 0 0 10px">
+                <b>Informa de cualquier incidencia de seguridad que afecte a los datos personales</b>: En caso de detectar cualquier incidencia de seguridad, se deberá poner en conocimiento del departamento encargado de protección de datos, en el buzón privacidad@leroymerlin.es
+            </p>
+        </div>
+    </div>
+</div>
+<script>
+    var checkEvents = [false, false];
+    var flips = document.getElementsByClassName('flip-card');
+    function showFlip(e) {
+        e--;
+        checkEvents[e] = true;
+        if(!checkEvents.includes(false)) {
+            passPage();
+        }
+        if(flips[e].classList.contains('show')) {
+            flips[e].classList.remove('show'); 
+        } else {
+            flips[e].classList.add('show');
+        }
+    }
+</script>

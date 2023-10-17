@@ -1,0 +1,103 @@
+<div id="slide" class="body-box fade-in trama down">
+    <div class="flex m-t slide-in-left" style="box-shadow: 0 1px 3px rgba(0,0,0, 0.12), 1px 0 3px rgba(0,0,0, 0.12); background-color: #005F61">
+        <div class="col-100 p flex j-start a-center" style="flex-wrap: nowrap">
+            <img height="40px" src="img/icons/circle-info-solid.svg" alt="">
+            <p style="color: white; margin: 0 0 0 10px">
+                <b>Ejercicio pregunta test:</b><br>
+                Elige la respuesta que creas adecuada:
+            </p>
+        </div>
+    </div>
+    <div class="col-100 slide-in-right">
+        <div class="question">
+            <!-- <p>La novia de Antonio, un trabajador del Departamento Comercial, está en Nueva Zelanda trabajando para una importante empresa ferroviaria del país. Las llamadas a dicho país tienen un elevado coste, así que Antonio aprovecha la hora de la comida, cuando los jefes y el resto del equipo no están, para llamar a su novia desde el teléfono de la empresa. Durante las llamadas le cuenta con todo detalle las futuras estrategias comerciales que la organización va a lanzar, ya que ella piensa que algunas de estas estrategias le podrían servir para realizar alguna propuesta dentro de su empresa. <b class="brand">¿Es correcto el comportamiento de Antonio?</b></p> -->
+            <p>Antonio tiene una empresa de ropa y para mejorar su negocio ha decido crear una página web para vender la ropa que diseña. Si bien, quiere enviar comunicaciones comerciales a todos los usuarios que se registran en la página web. ¿Puede hacerlo Antonio?</p>
+        </div>
+        <div class="options">
+            <div class="value">
+                <p>A</p>
+            </div>
+            <div class="label label1" onclick="setAnswer(0)">
+                <!-- <p>Tampoco pasa nada por un par de llamadas a la semana. En una organización tan grande se realizan habitualmente llamadas internacionales, qué más dará por un par de llamadas más.</p> -->
+                <p>a.	Sí, siempre que Antonio informe en el momento de registro de que va a realizar este tipo de comunicaciones.</p>
+            </div>
+        </div>
+        <div class="options">
+            <div class="value">
+                <p>B</p>
+            </div>
+            <div class="label label1" onclick="setAnswer(1)">
+                <!-- <p>No, ya que Antonio, en primer lugar, no está realizando un uso adecuado y responsable de los recursos de la empresa. Y, lo más grave, no está cumpliendo con el principio de confidencialidad respecto a la información que trata como consecuencia de su actividad laboral.</p> -->
+                <p>b.	Sí, la base de legitimación de Antonio es el interés legítimo en que su negocio mejore y poder obtener más ventas.</p>
+            </div>
+        </div>
+        <div class="options">
+            <div class="value">
+                <p>C</p>
+            </div>
+            <div class="label label1" onclick="setAnswer(2)">
+                <!-- <p>Antonio quizás debiera realizar menos llamadas a Nueva Zelanda para que la empresa no se dé cuenta y, en cuanto a compartir con su novia datos estratégicos de la empresa, piensa que no son “tan relevantes”; además, es algo que entra dentro de la confianza de las relaciones de pareja.</p> -->
+                <p>c.	No, Antonio debe obtener el consentimiento previo de todos aquellos que registren en la página web.</p>
+            </div>
+        </div>
+        <div class="flex j-end">
+            <!-- <p id="feedback" style="background-color: white;">
+                <b>
+                    <span class="success-answer">RECUERDA: Utiliza los recursos de la empresa de forma responsable, preservándolos de cualquier uso inadecuado. Mantén la más estricta confidencialidad y discreción sobre toda aquella información que tratas como consecuencia del desempeño de tu actividad profesional para que no pueda ser utilizada de manera inadecuada y no la utilices indebidamente en beneficio propio o de terceros.</span>
+                    <span class="fail-answer">RECUERDA: Utiliza los recursos de la empresa de forma responsable, preservándolos de cualquier uso inadecuado. Mantén la más estricta confidencialidad y discreción sobre toda aquella información que tratas como consecuencia del desempeño de tu actividad profesional para que no pueda ser utilizada de manera inadecuada y no la utilices indebidamente en beneficio propio o de terceros.</span>
+                </b>
+            </p> -->
+            <button disabled id="check-btn" class="m-t-2" onclick="checkAnswer()">Validar</button>
+        </div>
+    </div>
+    <!-- <div class="flex m-t slide-in-left" style="box-shadow: 0 1px 3px rgba(0,0,0, 0.12), 1px 0 3px rgba(0,0,0, 0.12); background-color: #d0d0d0">
+        <div class="col-100 p flex j-start a-center" style="flex-wrap: nowrap">
+            <img height="40px" src="img/icons/circle-info-solid.svg" alt="">
+            <p style="margin: 0 0 0 10px">
+                * Estos casos son supuestos teóricos y ficticios que no están relacionados con cuestiones reales que tengamos conocimiento por el Canal Ético del Grupo. Cualquier parecido con la realidad es pura coincidencia. Los nombres y cargos son inventados.
+            </p>
+        </div>
+    </div> -->
+</div>
+<script>
+    var checkEvents = [false];
+    var checkEvents = [false];
+    var value;
+    var correct = 2;
+    var values = document.getElementsByClassName("value");
+    var labels = document.getElementsByClassName("label1");
+    function setAnswer(e) {
+        value = e;
+        for(i = 0; i < labels.length; i++ ) {
+            labels[i].classList.remove('checked');
+            labels[e].classList.add('checked');
+        }
+        document.getElementById('check-btn').disabled = false;
+    }
+    function checkAnswer() {
+        checkEvents[0] = true;
+        if(!checkEvents.includes(false)) {
+            passPage();
+        }
+        for(i = 0; i < labels.length; i++ ) {
+            labels[i].classList.remove('checked');
+            if (i === correct) {
+                values[i].classList.add('correct');
+                labels[i].classList.add('correct');
+            } else if (i === value && i !== correct) {
+                values[i].classList.add('incorrect');
+                labels[i].classList.add('incorrect');
+            } else {
+                values[i].classList.add('not-touched');
+            }
+        }
+        if (value === correct) {
+            document.getElementsByClassName("success-answer")[0].style.display = 'inline';
+        } else {
+            document.getElementsByClassName("fail-answer")[0].style.display = 'inline';
+        }
+        document.getElementById('feedback').style.display = "block";
+        document.getElementById('check-btn').style.display = "none";
+    }
+
+</script>

@@ -1,0 +1,179 @@
+.single-question {
+    background-color: #F3F6F9;
+    padding: 2rem;
+    width: 100%;
+
+    .option {
+        width: 100%;
+        margin: 1rem 0;
+        background-color: white;
+        padding: 1rem 2rem;
+        @include flex(flex-start, center);
+        box-shadow: 0 0.1rem 1rem 0.25rem rgb(0 0 0 / 5%);
+        transition: all 400ms ease-in-out;
+        cursor: pointer;
+        img {
+            margin-right: 10px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        &:hover {
+            background-color: lightgray;
+        }
+
+        &.selected {
+            background-color: lightgray;
+        }
+
+        &.success {
+            background-color: $success-color;
+            color: white;
+        }
+
+        &.danger {
+            background-color: $danger-color;
+            color: white;
+        }
+    }
+
+}
+.question-footer {
+    padding: 2rem;
+    @include flex(flex-end, center);
+    background-color: white;
+    box-shadow: 0 0.1rem 1rem 0.25rem rgb(0 0 0 / 5%);
+}
+
+.multi-questions {
+    .question {
+        @include flex(flex-start, center);
+        cursor: pointer;
+        margin: 1rem 0;
+        img {
+            height: 44px;
+            flex-shrink: 0;
+            margin-right: 1rem;
+
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+        span {
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+
+        &.success {
+            position: relative;
+            opacity: 0;
+            left: -200px;
+            animation: left-fade-in 300ms 1 forwards;
+            img {
+                border: 1px solid #1BC5BD;
+                border-radius: 50%;
+                &:nth-child(1) {
+                    display: none;
+                }
+                &:nth-child(2) {
+                    display: inline;
+                }
+            }
+            span {
+                background-color: #1BC5BD;
+                color: white;
+            }
+            pointer-events: none;
+        }
+        &.danger {
+            img {
+                border: 1px solid #F64E60;
+                border-radius: 50%;
+            }
+            span {
+                background-color: #F64E60;
+                color: white;
+            }
+        }
+    }
+}
+
+.questions-modal {
+    position: fixed;
+    top: 1.5rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 70%;
+    max-height: calc(100vh - 3rem);
+    overflow-y: auto;
+    border-radius: 0.5rem;
+    z-index: 200;
+    background-color: white;
+    display: none;
+    opacity: 0;
+    transition: all 400ms ease-in-out;
+
+    .header-modal {
+        padding: 1.5rem;
+        border-bottom: 0.5px solid rgb(230, 230, 230);
+        @include flex(space-between, center);
+
+        img {
+            cursor: pointer;
+            height: 22px;
+            flex-shrink: 0;
+        }
+
+    }
+
+    .body-modal {
+        padding: 1.5rem;
+
+        .option {
+            border: 1px solid #9e9e9e;
+            margin: 1rem 0;
+            padding: 0.8rem;
+            cursor: pointer;
+            @include flex(flex-start, center);
+
+            &:hover {
+                background-color: rgb(236, 236, 236);
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+
+            p:first-child {
+                background-color: #D1D3E0;
+                width: 28px;
+                min-width: 28px;
+                height: 28px;
+                min-height: 28px;
+                border-radius: 50%;
+                margin-right: 8px;
+                @include flex(center, center)
+            }   
+
+            &.success {
+                background-color: #1BC5BD;
+                color: white;
+            }
+            &.danger {
+                background-color: #F64E60;
+                color: white;
+            }
+            &.wrong {
+                background-color: #242424;
+                color: white;
+            }
+        }
+    }
+
+    .footer-modal {
+        padding: 1.5rem;
+        border-top: 0.5px solid rgb(230, 230, 230);
+        @include flex(flex-end, center);
+    }
+}

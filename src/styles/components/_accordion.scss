@@ -1,0 +1,68 @@
+.accordion {
+    box-sizing: content-box;
+    margin: 2rem auto;
+    //box-shadow: $shadow;
+    border-bottom: 0.5px solid $brand-color;
+
+    article {
+        transition: all 700ms ease-in-out;
+
+        .accordion-title {
+            border-top: 0.5px solid $brand-color;
+            border-right: 0.5px solid $brand-color;
+            border-left: 0.5px solid $brand-color;
+            padding: 1rem;
+            @include flex(space-between, center);
+            cursor: pointer;
+            background-color: white;
+
+            h3 {
+                color: $brand-color;
+                font-family: $main-font;
+            }
+
+            .plus,
+            .minus {
+                transition: all 300ms ease-in-out;
+            }
+
+            .minus {
+                display: none;
+            }
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 2rem;
+            background-color: #f3f3f3;
+            border-right: 0.5px solid $brand-color;
+            border-left: 0.5px solid $brand-color;
+
+            p {
+                // font-size: 1rem;
+                // b {
+                //     color: white;
+                // }
+            }
+        }
+
+        &.show {
+
+            .minus {
+                display: block;
+            }
+
+            .plus {
+                display: none;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 540px) {
+    .accordion {
+        width: 100%;
+        margin: 2rem 0;
+    }
+}

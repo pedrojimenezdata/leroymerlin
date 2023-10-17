@@ -1,0 +1,50 @@
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" width="70.1" height="72.7" viewBox="0 0 70.1 72.7">
+
+<style>
+	
+
+      .st2 {
+        stroke-dasharray: 500;
+        stroke-dashoffset: 500;
+        animation: dash 2s linear;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes dash {
+        from {
+            stroke-dashoffset: 500;
+        }
+
+        to {
+            stroke-dashoffset: 0;
+        }
+    } 
+
+      .st0 {
+          opacity: 0;
+          animation: opa 0.25s linear;
+          animation-fill-mode: forwards;
+      }
+
+      @keyframes opa {
+          from {
+              opacity: 0;
+          }
+
+          to {
+              opacity: 0.3;
+          }
+      }
+
+</style>
+
+  <title>imagen</title>
+  <g >
+    <circle class="st0" cx="40.3" cy="23.8" r="7" style="fill: #81bcbf;isolation: isolate; animation-delay: 1.6s"/>
+    <path class="st0" d="M4.5,5.5V72.2H69.6V5.5ZM64.3,53,49.1,37.8l-9,9-17-17L9.8,43.1V10.9H64.3Z" transform="translate(0.5 0.5)" style="fill: #81bcbf;isolation: isolate; animation-delay: 1.8s"/>
+  </g>
+  <rect class="st2" x="6.3" y="6.4" width="54.5" height="55.8" style="fill: none;stroke: #292929;stroke-linecap: round;stroke-linejoin: round;stroke-width: 0.75px; animation-delay: 0.25s"/>
+  <circle class="st2" cx="37.3" cy="19.8" r="7" style="fill: none;stroke: #292929;stroke-linecap: round;stroke-linejoin: round;stroke-width: 0.75px; animation-delay: 0.5s"/>
+  <polyline class="st2" points="60.8 47.5 45.6 32.3 36.6 41.3 19.6 24.3 6.3 37.6" style="fill: none;stroke: #292929;stroke-linecap: round;stroke-linejoin: round;stroke-width: 0.75px; animation-delay: 0.75s"/>
+  <rect class="st2" x="1" y="1" width="65.1" height="66.65" style="fill: none;stroke: #292929;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px; animation-delay: 1s"/>
+</svg>
